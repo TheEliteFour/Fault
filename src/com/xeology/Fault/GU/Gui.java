@@ -50,7 +50,7 @@ public class Gui extends javax.swing.JFrame {
 
         Current.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 255, 0)));
         Current.setFocusable(false);
-        Current.setBounds(14, 10, 220, 50);
+        Current.setBounds(14, 10, 220, 70);
         jLayeredPane1.add(Current, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         Background.setBackground(new java.awt.Color(0, 0, 0));

@@ -18,6 +18,7 @@ public class GUIHandler {
     private Gui gui;
     private List<String> progList = new ArrayList<String>();
     private HashMap<String, Integer> cells;
+    private int cell;
 
     public Gui getGUI() {
 	return gui;
@@ -27,7 +28,7 @@ public class GUIHandler {
 	gui = g;
     }
 
-    public void updateCurrent(int round, int cycle) {
+    public void updateCurrent(int round, int cycle, int cell) {
 	BigDecimal base = BigDecimal.valueOf(Config.rounds);
 	BigDecimal div = BigDecimal.valueOf(round);
 	double percent = div.divide(base, 2, RoundingMode.HALF_UP).doubleValue();
@@ -35,9 +36,12 @@ public class GUIHandler {
 	int roundBars = (int) (percent * 25);
 	base = BigDecimal.valueOf(Config.cycles);
 	div = BigDecimal.valueOf(cycle);
-	percent = div.divide(base, 2, RoundingMode.HALF_UP).doubleValue();
-	percent = div.divide(base, 2, RoundingMode.HALF_UP).doubleValue();
+	percent = div.divide(base, 2, RoundingMode.HALF_UP).doubleValue();	
 	int cyclesBars = (int) (percent * 25);
+	base = BigDecimal.valueOf(Config.cells);
+	div = BigDecimal.valueOf(cell);
+	percent = div.divide(base, 2, RoundingMode.HALF_UP).doubleValue();	
+	int cellBars = (int) (percent * 25);
 	String out = "<html><body><font color=\"#33FF00\">&nbsp;&nbsp;&nbsp;Round&nbsp;&nbsp;&nbsp;[</font><font color=\"red\">";
 	for (int ctr = 0; ctr < roundBars; ctr++) {
 	    out = out + "|";
@@ -55,7 +59,16 @@ public class GUIHandler {
 	    out = out + "&nbsp;";
 	    
 	}
-	out=out+"</font><font color =\"#33FF00\">]</font><font color=\"red\">&nbsp;&nbsp;&nbsp;"+ cycle + "</font></body></html>";
+	out=out+"</font><font color =\"#33FF00\">]</font><font color=\"red\">&nbsp;&nbsp;&nbsp;"+ cycle + "</font><font color =\"#33FF00\"><br>";
+	out = out+"&nbsp;&nbsp;&nbsp;Cells&nbsp;&nbsp;&nbsp;[</font><font color=\"red\">";
+	for (int ctr = 0; ctr < cellBars; ctr++) {
+	    out = out + "|";
+	}
+	for (int ctr = 0; ctr < (25 - cellBars); ctr++) {
+	    out = out + "&nbsp;";
+	    
+	}
+	out=out+"</font><font color =\"#33FF00\">]</font><font color=\"red\">&nbsp;&nbsp;&nbsp;"+ cell + "</font></body></html>";
 	gui.Current.setText(out);
    
 

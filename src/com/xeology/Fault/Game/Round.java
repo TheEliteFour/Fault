@@ -253,13 +253,15 @@ public class Round {
 		cycles--;
 		break;
 
-	    }
-	    gui.updateCurrent(round, cycles);
+	    }	    
 	    Log.write("");
 	    Log.write("* Beggining CPU Cycle " + cycles + " *");
 	    Log.write("");
 	    List<Program> programs = new ArrayList<Program>();
+	    int cellctr=1;
 	    for (Program program : cells) {
+		gui.updateCurrent(round, cycles,cellctr);
+		cellctr++;
 		if (program == null) {
 		    continue;
 		}
