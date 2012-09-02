@@ -1,5 +1,6 @@
 package com.xeology.Fault.Program.Commands;
 
+import com.xeology.Fault.Game.Log;
 import com.xeology.Fault.Program.Errors;
 import com.xeology.Fault.Program.Program;
 
@@ -8,6 +9,8 @@ import com.xeology.Fault.Program.Program;
  * @author ExtendTeam
  */
 public class CommandHandler {
+
+    public static final boolean demoMode = false;
 
     public static String process(Program program, String command, boolean withinCommand) {
 	String[] broken = command.split(" ");
@@ -41,8 +44,12 @@ public class CommandHandler {
 	if (broken[0].toLowerCase().equals("mov")) {
 	    return MOV.process(program, broken);
 	}
-	if (broken[0].toLowerCase().equals("if")) {
-	    return IF.process(program, broken);
+	if (broken[0].toLowerCase().equals("if") && demoMode) {
+	    Log.write("You cant use IF statements in the demo.");
+	} else {
+	    if (broken[0].toLowerCase().equals("if")) {
+		return IF.process(program, broken);
+	    }
 	}
 	if (broken[0].toLowerCase().equals("copy")) {
 	    return COPY.process(program, broken);

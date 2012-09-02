@@ -4,6 +4,16 @@
  */
 package com.xeology.Fault.GU;
 
+import java.awt.Toolkit;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+
+
 /**
  *
  * @author Xeology
@@ -15,6 +25,9 @@ public class Gui extends javax.swing.JFrame {
      */
     public Gui() {
 	initComponents();
+	this.setIconImage(new 
+ImageIcon(getClass().getResource("Gears.png")).getImage()); 
+
     }
 
     /**
@@ -38,6 +51,7 @@ public class Gui extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Fault: Graphic Interface");
+        setIconImages(null);
         setResizable(false);
 
         jLayeredPane1.setFocusable(false);

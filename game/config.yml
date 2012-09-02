@@ -1,11 +1,11 @@
 Programs-Directory: C:\Users\Xeology\Documents\NetBeansProjects\Fault\game\programs
 Rounds: 3
-Cells: 100
-Memory-Blocks: 50
+Cells: 500
+Memory-Blocks: 200
 Use-Program-List: false
 Program-List:
 - virus
 - virus3
-Max-Cycles: 50
+Max-Cycles: 100
 Debug-Mode: false
 Use-GUI: true

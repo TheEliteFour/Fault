@@ -1,6 +1,7 @@
 package com.xeology.Fault.Game;
 
 import com.xeology.Fault.Fault;
+import com.xeology.Fault.Program.Commands.CommandHandler;
 import com.xeology.Fault.Util.Configurations.InvalidConfigurationException;
 import com.xeology.Fault.Util.Configurations.file.YamlConfiguration;
 import java.io.File;
@@ -127,6 +128,12 @@ public class Config {
 	    round = 3;
 	    System.out.println("You must have at least 1 Round, setting to 3.");
 	}
+	if (CommandHandler.demoMode) {
+	    if (round !=3) {
+	    round = 3;
+		Log.write("In the demo you cant have anything but 3 rounds, setting to 3.");
+	    }
+	}
 	rounds = round;
 	int cell = config.getInt("Cells", 100);
 	if (cell < 100) {
@@ -137,11 +144,23 @@ public class Config {
 	    cell = 1000;
 	    System.out.println("You cant have more than 1000 Cells, setting to 1000.");
 	}
+	if (CommandHandler.demoMode) {
+	    if (cell != 100) {
+		cell = 100;
+		Log.write("In the demo you cant have anything but 100 Cells, setting to 100.");
+	    }
+	}
 	cells = cell;
 	int cycle = config.getInt("Max-Cycles", 50);
 	if (cycle < 50) {
 	    cycle = 50;
 	    System.out.println("You must have at least 50 Cycles, setting to 50.");
+	}
+	if (CommandHandler.demoMode) {
+	    if (cycle != 50) {
+		cycle = 50;
+		Log.write("In the demo you can't have anything but 50 Cycles, setting to 50.");
+	    }
 	}
 	cycles = cycle;
 	int block = config.getInt("Memory-Blocks", 50);
@@ -153,7 +172,19 @@ public class Config {
 	    block = 400;
 	    System.out.println("You cant have more than 400 Memory Blocks, setting to 400.");
 	}
+	if (CommandHandler.demoMode) {
+	    if (block != 50) {
+		block = 50;
+		Log.write("In the demo you cant have anything but 50 Memory Blocks, setting to 50.");
+	    }
+	}
 	debug = config.getBoolean("Debug-Mode", false);
+	if (CommandHandler.demoMode) {
+	    if (debug) {
+		debug = false;
+		Log.write("You can't use the Debug Mode in the demo.");
+	    }
+	}
 	useGUI = config.getBoolean("Use-GUI", true);
 	memory = block;
 	config.set("Programs-Directory", programs);
