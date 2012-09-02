@@ -50,11 +50,13 @@ Commands
 MOV # - 1 point - Moves to the specified number.
 COPY # - 8 points - Copy program to a specified cell
 CORRUPT CELL/BLOCK # - 4 points - Corrupt a specified Cell/Memory Block.
+
 SHIFT CELL/BLOCK # - 3 points - Shifts a specified Cell/Memory Block to the other specified Cell/Memory
                                 Block.  If you shift a Corrupted Cell onto a program you will crash that
-								program.  If you shift a Corrupted Cell to an empty Cell it becomes a
-								Corrupted Cell.  If you shift a program onto a Corrupted Cell it crashes
-								that program.  It will move Corrupted Memory Blocks.
+				program.  If you shift a Corrupted Cell to an empty Cell it becomes a
+				Corrupted Cell.  If you shift a program onto a Corrupted Cell it crashes
+				that program.  It will move Corrupted Memory Blocks.
+
 RAND - 0 points - Get a random number between 0 and 255.
 RAND{#,#} - 0 points - Get a random number specified between the limits of -255 and 255.
 DELETE CELL/BLOCK - 1 points - Deletes a specified Cell/Block.
@@ -62,6 +64,8 @@ EXTRA # # # - 0 points - Lock the 3 specified Memory Blocks as a CPU Cache for 2
 PUT # # - 0 points - Puts the second value into the Memory Block specified in the First value.
 GET[#] - 0 points - Get the specified Memory Blocks contents.
 MATH(#_SYMBOL_#) - 0 points - Does math on the 2 specified numbers.  The only accepted symbols are + - and *.
+
 IF # SYMBOL # - 0 points - Continues with the IF Block if the given is TRUE.  Symbols supported are ! and = 
-                for not equal and equal
+			   for not equal and equal
+
 ENDIF - 0 points Ends IF Block

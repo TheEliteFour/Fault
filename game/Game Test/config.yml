@@ -3,6 +3,7 @@ Rounds: 3
 Max-Cycles: 50
 Cells: 100
 Memory-Blocks: 50
+Use-GUI: true
 Use-Program-List: false
 Program-List:
 - virus
