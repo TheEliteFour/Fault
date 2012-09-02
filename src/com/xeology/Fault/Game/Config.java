@@ -38,7 +38,7 @@ public class Config {
 	    config.set("Max-Cycles", 50);
 	    config.set("Cells", 100);
 	    config.set("Memory-Blocks", 50);
-	    config.set("Use-GUI", true);
+	    //config.set("Use-GUI", true);
 	    config.set("Use-Program-List", false);
 	    List<String> list = new ArrayList<String>();
 	    list.add("virus");
@@ -192,7 +192,7 @@ public class Config {
 	config.set("Max-Cycles", cycles);
 	config.set("Cells", cells);
 	config.set("Memory-Blocks", memory);
-	config.set("Use-GUI", useGUI);
+	//config.set("Use-GUI", useGUI);
 	config.set("Debug-Mode", debug);
 	save(config);
     }
