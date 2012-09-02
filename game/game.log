@@ -16,60 +16,8 @@ Programs: Virus, Virus 2, Virus 3, Virus 4, Virus 5
 Round 1
 --------------------------------------
 
-Virus was given Cell 93
-Virus 2 was given Cell 2
-Virus 3 was given Cell 85
-Virus 4 was given Cell 28
-Virus 5 was given Cell 30
-
-* Beggining CPU Cycle 1 *
-
-- Executing Virus 2 in Cell 2
-Virus 2 Copied to Cell 32
-Virus 2 Put 1 into Memory Block 1.
-Virus 2 Got 1 from Memory Block 1.
-Virus 2 Moved to Cell 7
-Virus 2 Corrupted Memory Block 25.
-- Executing Virus 4 in Cell 28
-Virus 4 Moved to Cell 29
-Virus 5 was destroyed in Cell 30 by Virus 4 overwriting it.
-Virus 4 Moved to Cell 31
-Virus 2 was destroyed in Cell 32 by Virus 4 overwriting it.
-Virus 4 Moved to Cell 31
-Virus 4 Moved to Cell 30
-Virus 4 Moved to Cell 29
-Virus 4 Moved to Cell 28
-- Executing Virus 3 in Cell 85
-Virus 3 Copied to Cell 87
-Virus 3 Corrupted Cell 37.
-Virus 3 suffered a Out of Points Error on LINE 3.
-- Executing Virus in Cell 93
-Virus Copied to Cell 27
-Virus Put 1 into Memory Block 1.
-Virus Got 1 from Memory Block 1.
-Virus Moved to Cell 97
-Virus Corrupted Cell 5.
-
-* Beggining CPU Cycle 2 *
-
-- Executing Virus 2 in Cell 7
-Virus 2 Copied to Cell 53
-Virus 2 Put 1 into Memory Block 1.
-Virus 2 Got 1 from Memory Block 1.
-Virus 2 Moved to Cell 12
-Virus 2 Corrupted Memory Block 34.
-- Executing Virus in Cell 27
-Virus Copied to Cell 41
-Virus Put 1 into Memory Block 1.
-Virus Got 1 from Memory Block 1.
-Virus Moved to Cell 31
-Virus Corrupted Cell 67.
-- Executing Virus 4 in Cell 28
-Virus 4 Moved to Cell 29
-Virus 4 Moved to Cell 30
-Virus was destroyed in Cell 31 by Virus 4 overwriting it.
-Virus 4 Moved to Cell 32
-Virus 4 Moved to Cell 31
-Virus 4 Moved to Cell 30
-Virus 4 Moved to Cell 29
-Virus 4 Moved to Cell 28
+Virus was given Cell 33
+Virus 2 was given Cell 7
+Virus 3 was given Cell 79
+Virus 4 was given Cell 9
+Virus 5 was given Cell 33

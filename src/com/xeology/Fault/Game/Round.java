@@ -41,6 +41,7 @@ public class Round {
 	    while (takenCells.contains(cell)) {
 		cell = rand.nextInt(Config.cells - 1);
 	    }
+	    takenCells.add(cell);
 	    cells[cell] = program;
 	    program.setCell(cell);
 	    Log.write(program.getName() + " was given Cell " + cell);

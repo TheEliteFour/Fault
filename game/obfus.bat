@@ -1,3 +1,5 @@
+del Fault.exe
+del Fault-obfus.jar
 xcopy C:\Users\Xeology\Documents\NetBeansProjects\Fault\dist\Fault.jar C:\Users\Xeology\Documents\NetBeansProjects\Fault\game /Y
 java -jar proguard.jar -include obfus.conf
 7za a Fault-obfus.jar com
