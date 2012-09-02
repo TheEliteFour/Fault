@@ -80,7 +80,7 @@ public class SHIFT {
 		    return Errors.accessError;
 		}
 	    } else {
-		value=CPURounder.round(value, program);
+		value = CPURounder.round(value, program);
 	    }
 	    return Errors.valueError + value;
 
@@ -90,20 +90,19 @@ public class SHIFT {
 
 
 
-	    if (command[2+offset].toLowerCase().length()<3){
+	    if (command[2 + offset].toLowerCase().length() < 3) {
 		return Errors.syntaxError;
-	    } 
-	    String str="";
-	    if (command[2+offset].toLowerCase().length()<4){
-		str=command[2].toLowerCase().substring(0, 3);
 	    }
-	    else{
-		str=command[2+offset].toLowerCase().substring(0, 4);
-	    }	    
+	    String str = "";
+	    if (command[2 + offset].toLowerCase().length() < 4) {
+		str = command[2].toLowerCase().substring(0, 3);
+	    } else {
+		str = command[2 + offset].toLowerCase().substring(0, 4);
+	    }
 	    if (!str.contains("math") && !str.toLowerCase().contains("get") && !str.toLowerCase().contains("rand")) {
 		return Errors.syntaxError;
-	    }	    
-	    String error = CommandHandler.process(program, command[2+offset], true);
+	    }
+	    String error = CommandHandler.process(program, command[2 + offset], true);
 	    if (error.equals(Errors.syntaxError)) {
 		return Errors.syntaxError;
 	    }
@@ -111,8 +110,8 @@ public class SHIFT {
 		return Errors.crashError;
 	    }
 	    if (error.equals(Errors.accessError)) {
-	    return Errors.accessError;
-	}
+		return Errors.accessError;
+	    }
 	    int value = Integer.parseInt(error.replace(Errors.valueError, ""));
 	    if (memory) {
 		if (value > Config.memory) {
@@ -124,7 +123,7 @@ public class SHIFT {
 		    return Errors.accessError;
 		}
 	    } else {
-		value=CPURounder.round(value, program);
+		value = CPURounder.round(value, program);
 	    }
 	    return Errors.valueError + value;
 
@@ -173,12 +172,12 @@ public class SHIFT {
 
 
 
-	value=CPURounder.round(program.getCell() +value, program);
+	value = CPURounder.round(program.getCell() + value, program);
 	if (value == program.getCell()) {
 	    program.getRound().addLog(program.getName() + " tried to Shift it's own Cell.");
 	    return Errors.accessError;
 	}
-	value2=CPURounder.round(program.getCell() +value2, program);
+	value2 = CPURounder.round(program.getCell() + value2, program);
 	if (value2 == program.getCell()) {
 	    program.getRound().addLog(program.getName() + " tried to Shift onto it's own Cell.");
 	    return Errors.accessError;

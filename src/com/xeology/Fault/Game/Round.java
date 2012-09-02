@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Random;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -20,7 +22,7 @@ public class Round {
     private boolean[] corruptedBlocks = new boolean[Config.memory];
     private boolean[] lockedBlocks = new boolean[Config.memory];
     private int cycles;
-    private GUIHandler gui;
+    public GUIHandler gui;
     private int round;
     private List<Program> programList;
     //private List<String> logs = new ArrayList<String>();
@@ -53,12 +55,15 @@ public class Round {
 
     public String setCell(int cell, Program program, Program issueing, boolean mov) {
 	if (program == null && !mov && cells[cell] != null) {
+
 	    Log.write(cells[cell].getName() + " was destroyed in Cell " + cell + " by " + issueing.getName() + " deleting it.");
 	}
 	if (program != null && cells[cell] != null) {
 	    if (mov) {
+
 		Log.write(cells[cell].getName() + " was destroyed in Cell " + cell + " by " + issueing.getName() + " overwriting it.");
 	    } else {
+
 		Log.write(cells[cell].getName() + " was destroyed in Cell " + cell + " by " + issueing.getName() + " copying over it.");
 	    }
 
@@ -67,15 +72,22 @@ public class Round {
 	    Log.write(program.getName() + " Moved to Cell " + cell);
 	}
 	if (program != null && cells[cell] == null && !mov) {
+
 	    Log.write(program.getName() + " Copied to Cell " + cell);
 	}
 	if (corruptedCells[cell]) {
 	    Log.write(program.getName() + " accessed Corrupted Cell " + cell + ".");
+
 	    corruptedCells[cell] = false;
+	    gui.updateCPU(null, cell);
 	    setCell(issueing.getCell(), null, issueing, false);
 	    return Errors.crashError;
 	}
-
+	if (program == null) {
+	    gui.updateCPU(null, cell);
+	} else {
+	    gui.updateCPU(program.getName(), cell);
+	}
 	cells[cell] = program;
 	return Errors.okError;
     }
@@ -86,12 +98,16 @@ public class Round {
 	    return Errors.accessError;
 	}
 	if (corruptedBlocks[block]) {
+
 	    Log.write(program.getName() + " accessed Corrupted Memory Block " + block + ".");
 	    corruptedBlocks[block] = false;
+	    gui.updateMemory(block, 0, false, false);
 	    return Errors.crashError;
 	}
 	Log.write(program.getName() + " Corrupted Memory Block " + block + ".");
 	corruptedBlocks[block] = true;
+	blocks[block] = 0;
+	gui.updateMemory(block, 0, true, false);
 	return Errors.okError;
     }
 
@@ -101,12 +117,16 @@ public class Round {
 	    return Errors.accessError;
 	}
 	if (corruptedBlocks[block]) {
+
 	    Log.write(program.getName() + " accessed Corrupted Memory Block " + block + ".");
 	    corruptedBlocks[block] = false;
+	    gui.updateMemory(block, 0, false, false);
 	    return Errors.crashError;
 	}
 	Log.write(program.getName() + " Locked Memory Block " + block + " for a CPU Cache.");
 	lockedBlocks[block] = true;
+	blocks[block] = 0;
+	gui.updateMemory(block, 0, false, true);
 	return Errors.okError;
     }
 
@@ -116,12 +136,15 @@ public class Round {
 	    return Errors.accessError;
 	}
 	if (corruptedBlocks[block]) {
+
 	    Log.write(program.getName() + " accessed Corrupted Memory Block " + block + ".");
 	    corruptedBlocks[block] = false;
+	    gui.updateMemory(block, 0, false, false);
 	    return Errors.crashError;
 	}
 	Log.write(program.getName() + " Put " + value + " into Memory Block " + block + ".");
 	blocks[block] = value;
+	gui.updateMemory(block, value, false, false);
 	return Errors.okError;
     }
 
@@ -135,6 +158,7 @@ public class Round {
 	    return Errors.accessError;
 	}
 	if (corruptedBlocks[block]) {
+
 	    Log.write(program.getName() + " accessed Corrupted Memory Block " + block + ".");
 	    corruptedBlocks[block] = false;
 	    return Errors.crashError;
@@ -149,6 +173,7 @@ public class Round {
 	    return Errors.accessError;
 	}
 	if (corruptedBlocks[block]) {
+
 	    Log.write(program.getName() + " accessed Corrupted Memory Block " + block + ".");
 	    corruptedBlocks[block] = false;
 	    return Errors.crashError;
@@ -180,18 +205,40 @@ public class Round {
 
     public String shiftCell(int cell, int cell2, Program program) {
 	if (corruptedCells[cell] && cells[cell2] != null) {
+
 	    Log.write(program.getName() + " Shifted Corrupted Cell " + cell + " onto " + cells[cell2].getName() + " in Cell " + cell2 + ".");
 	} else {
 	    if (corruptedCells[cell2] && cells[cell] != null) {
+
 		Log.write(program.getName() + " Shifted " + cells[cell2].getName() + " in Cell " + cell + "onto Corrupted Cell " + cell2 + ".");
 	    } else {
 		Log.write(program.getName() + " Shifted Cell " + cell + " to " + cell2 + ".");
 	    }
 	}
+	if (cells[cell] != null & cells[cell2] != null) {
+
+	    Log.write(program.getName() + " Shifted " + cells[cell] + " in Cell " + cell + " onto " + cells[cell2] + " in " + cell2 + ".");
+	}
+	if (cells[cell] == null & cells[cell2] != null) {
+	    Log.write(program.getName() + " Shifted nothing in Cell " + cell + " onto " + cells[cell2] + " in " + cell2 + ".");
+	}
 
 
 	corruptedCells[cell2] = corruptedCells[cell];
+	if (corruptedCells[cell2]) {
+	    gui.updateCPU("Corrupted.xVx.xVx", cell2);
+	    gui.updateCPU(null, cell);
+	}
 	cells[cell2] = cells[cell];
+	if (cells[cell2] != null && !corruptedCells[cell2]) {
+	    gui.updateCPU(cells[cell2].getName(), cell2);
+	    gui.updateCPU(null, cell);
+	} else {
+	    if (!corruptedCells[cell2]) {
+		gui.updateCPU(null, cell2);
+		gui.updateCPU(null, cell);
+	    }
+	}
 	if (cells[cell2] != null) {
 	    cells[cell2].setCell(cell2);
 	}
@@ -205,24 +252,31 @@ public class Round {
 	    return Errors.okError;
 	}
 	if (corruptedCells[cell]) {
+
 	    Log.write(program.getName() + " accessed Corrupted Cell " + cell + ".");
 	    corruptedCells[cell] = false;
+	    gui.updateCPU(null, cell);
 	    return Errors.crashError;
 	}
 	Log.write(program.getName() + " Corrupted Cell " + cell + ".");
 	corruptedCells[cell] = true;
+	gui.updateCPU("Corrupted.xVx.xVx", cell);
 	return Errors.okError;
     }
 
     public String deleteCell(int cell, Program program) {
 	if (cells[cell] != null) {
+
 	    Log.write(program.getName() + " deleted " + cells[cell].getName() + "'s Cell " + cell + ".");
 	    cells[cell] = null;
+	    gui.updateCPU(null, cell);
 	    return Errors.okError;
 	}
 	if (corruptedCells[cell]) {
+
 	    Log.write(program.getName() + " accessed Corrupted Cell " + cell + ".");
 	    corruptedCells[cell] = false;
+	    gui.updateCPU(null, cell);
 	    return Errors.crashError;
 	}
 	Log.write(program.getName() + " Deleted Empty Cell " + cell + ".");
@@ -231,16 +285,28 @@ public class Round {
 
     public String deleteCellAPI(int cell) {
 	cells[cell] = null;
+
+	gui.updateCPU(null, cell);
 	return Errors.okError;
     }
 
     public void start() {
+	gui.newColors(programList);
 	List<String> stringPrograms = new ArrayList<String>();
 	HashMap<String, Integer> counts = new HashMap<String, Integer>();
 	for (Program prog : programList) {
 	    stringPrograms.add(prog.getName());
 	}
-	gui.updateOutput(stringPrograms, null, true);
+	HashMap<String, Integer> initCells = new HashMap<String, Integer>();
+	for (Program iprog : cells) {
+	    if (iprog != null) {
+		initCells.put(iprog.getName(), 1);
+	    }
+	}
+	gui.updateOutput(stringPrograms, initCells, true);
+	gui.updateCPU(null, 0);
+	gui.updateMemory(0, 0, false, false);
+
 	while (true) {
 	    cycles = cycles + 1;
 	    if (cycles > Config.cycles) {
@@ -253,15 +319,16 @@ public class Round {
 		cycles--;
 		break;
 
-	    }	    
+	    }
 	    Log.write("");
 	    Log.write("* Beggining CPU Cycle " + cycles + " *");
 	    Log.write("");
 	    List<Program> programs = new ArrayList<Program>();
-	    int cellctr=1;
+	    int cellctr = 1;
 	    for (Program program : cells) {
-		gui.updateCurrent(round, cycles,cellctr);
+		gui.updateCurrent(round, cycles, cellctr);
 		cellctr++;
+
 		if (program == null) {
 		    continue;
 		}
@@ -271,8 +338,36 @@ public class Round {
 		Log.write("- Executing " + program.getName() + " in Cell " + program.getCell());
 		program.setCPUPoints(15);
 		program.execute();
+
+
+
+		for (Program prog : cells) {
+		    if (prog == null) {
+			continue;
+		    }
+		    if (counts.containsKey(prog.getName())) {
+			int count = counts.get(prog.getName());
+			count++;
+			counts.remove(prog.getName());
+			counts.put(prog.getName(), count);
+		    } else {
+			counts.put(prog.getName(), 1);
+		    }
+		}
+		for (String prog : stringPrograms) {
+		    if (!counts.containsKey(prog)) {
+			counts.put(prog, 0);
+		    }
+		}
+		gui.updateOutput(stringPrograms, counts, false);
+		counts.clear();
+
+
+
+
 		for (int ctr = 0; ctr < Config.memory; ctr++) {
 		    if (lockedBlocks[ctr]) {
+			gui.updateMemory(ctr, 0, false, false);
 			lockedBlocks[ctr] = false;
 		    }
 		}
@@ -284,23 +379,9 @@ public class Round {
 		if (program.isNew()) {
 		    program.setNewProgram(false);
 		}
-		if (counts.containsKey(program.getName())) {
-		    int count = counts.get(program.getName());
-		    count++;
-		    counts.remove(program.getName());
-		    counts.put(program.getName(), count);
-		} else {
-		    counts.put(program.getName(), 1);
-		}
 		programs.add(program);
 	    }
-	    for (String prog : stringPrograms) {
-		if (!counts.containsKey(prog)) {
-		    counts.put(prog, 0);
-		}
-	    }
-	    gui.updateOutput(stringPrograms, counts, false);
-	    counts.clear();
+
 	    WinnerHandler winner = new WinnerHandler();
 	    if (winner.processWinner(programs)) {
 		this.winners = winner.getWinner();

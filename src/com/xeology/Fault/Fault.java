@@ -50,11 +50,11 @@ public class Fault {
 	Debug.deleteOld();
 	Config.loadConfig();
 	Config.processDefaults();
-	Gui g=new Gui();
+	Gui g = new Gui();
 	if (Config.useGUI) {
-	g.setVisible(true);
+	    g.setVisible(true);
 	}
-	GUIHandler gui=new GUIHandler(g);
+	GUIHandler gui = new GUIHandler(g);
 	gui.updateSettings();
 	File dir = new File(Config.programs);
 	if (!dir.exists()) {
@@ -113,17 +113,17 @@ public class Fault {
 	System.out.println("The game is over.  Check game.log for details on the game.");
 	System.out.println();
 	if (Config.useGUI) {
-	System.out.println("Press ENTER or close the Graphic Interface to exit...");
-	}else{
+	    System.out.println("Press ENTER or close the Graphic Interface to exit...");
+	} else {
 	    System.out.println("Press ENTER to exit...");
 	}
 	Scanner sc = new Scanner(System.in);
-	while (sc.nextLine() == null);	
-	    gui.getGUI().dispose();
-	
+	while (sc.nextLine() == null);
+	gui.getGUI().dispose();
+
     }
 
-    public static void copyResourcesToDirectory( String jarDir, String destDir) {
+    public static void copyResourcesToDirectory(String jarDir, String destDir) {
 	JarFile fromJar = null;
 	try {
 	    try {
@@ -167,6 +167,5 @@ public class Fault {
 		}
 	    }
 	}
-    }    
-    
+    }
 }

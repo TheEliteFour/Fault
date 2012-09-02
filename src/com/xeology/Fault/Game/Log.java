@@ -14,23 +14,23 @@ public class Log {
 
     public static void write(String string) {
 	File file = new File(Fault.base, "game.log");
-	boolean newFile=false;
+	boolean newFile = false;
 	if (!file.exists()) {
-	    newFile=true;
+	    newFile = true;
 	    try {
 		file.createNewFile();
 	    } catch (IOException ex) {
-		System.out.println("Failed to create log "+file.getAbsolutePath()+"!");
+		System.out.println("Failed to create log " + file.getAbsolutePath() + "!");
 	    }
-	}	
+	}
 	try {
 	    FileWriter fstream = new FileWriter(file, true);
 	    BufferedWriter out = new BufferedWriter(fstream);
 	    System.out.println(string);
-	    if (!newFile){
-		string="\n"+string;
+	    if (!newFile) {
+		string = "\n" + string;
 	    }
-	    out.write(string);	    
+	    out.write(string);
 	    out.close();
 	} catch (Exception e) {
 	    System.err.println("Error: " + e.getMessage());

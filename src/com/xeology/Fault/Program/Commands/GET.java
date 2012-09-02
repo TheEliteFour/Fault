@@ -36,7 +36,7 @@ public class GET {
 	}
 
 
-	if (value > Config.memory-1) {
+	if (value > Config.memory - 1) {
 	    program.getRound().addLog(program.getName() + " tried to access Invalid Memory Block " + value + ".");
 	    return Errors.accessError;
 	}

@@ -12,10 +12,10 @@ public class CommandHandler {
     public static String process(Program program, String command, boolean withinCommand) {
 	String[] broken = command.split(" ");
 	if (broken.length < 2) {
-	    if (broken.length < 2 && !withinCommand) {		
+	    if (broken.length < 2 && !withinCommand) {
 		return Errors.syntaxError;
 	    }
-	    if (command.toLowerCase().length() < 3) {		
+	    if (command.toLowerCase().length() < 3) {
 		return Errors.syntaxError;
 	    }
 	    String str = "";
@@ -35,7 +35,7 @@ public class CommandHandler {
 	    }
 	    if (str.contains("math")) {
 		return MATH.process(program, command);
-	    }	    
+	    }
 	    return Errors.syntaxError;
 	}
 	if (broken[0].toLowerCase().equals("mov")) {

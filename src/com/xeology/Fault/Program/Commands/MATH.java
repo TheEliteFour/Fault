@@ -15,13 +15,13 @@ public class MATH {
 	if (command.toLowerCase().replace("math", "").contains("math")) {
 	    return Errors.syntaxError;
 	}
-	if (!command.toLowerCase().contains("(") || !command.toLowerCase().contains(")")|| !command.toLowerCase().contains("_") || (!command.toLowerCase().contains("+") && !command.toLowerCase().contains("*") && !command.toLowerCase().contains("-"))) {
+	if (!command.toLowerCase().contains("(") || !command.toLowerCase().contains(")") || !command.toLowerCase().contains("_") || (!command.toLowerCase().contains("+") && !command.toLowerCase().contains("*") && !command.toLowerCase().contains("-"))) {
 	    return Errors.syntaxError;
 	}
 	String math = command.toLowerCase().replace("math(", "").replace(")", "");
 	String[] vals = math.split("_");
 	if (vals == null) {
-	   return Errors.syntaxError;
+	    return Errors.syntaxError;
 	}
 	if (vals.length < 3) {
 	    return Errors.syntaxError;
@@ -44,18 +44,18 @@ public class MATH {
 	} catch (NumberFormatException ex) {
 	    return error;
 	}
-	if (vals[1].equals("-")&&vals[1].equals("+")&&vals[1].equals("*")){
+	if (vals[1].equals("-") && vals[1].equals("+") && vals[1].equals("*")) {
 	    return Errors.syntaxError;
 	}
 	int fin = 0;
-	if (vals[1].equals("-")){
-	    fin=value-value2;
+	if (vals[1].equals("-")) {
+	    fin = value - value2;
 	}
-	if (vals[1].equals("+")){
-	    fin=value+value2;
+	if (vals[1].equals("+")) {
+	    fin = value + value2;
 	}
-	if (vals[1].equals("*")){
-	    fin=value*value2;
+	if (vals[1].equals("*")) {
+	    fin = value * value2;
 	}
 
 
@@ -88,7 +88,7 @@ public class MATH {
 		str = command.toLowerCase().substring(0, 4);
 	    }
 	    if (!str.contains("rand") && !str.toLowerCase().contains("get")) {
-		System.out.println("Test 7 : "+str);
+		System.out.println("Test 7 : " + str);
 		return Errors.syntaxError;
 	    }
 	    String error = CommandHandler.process(program, command, true);
@@ -99,8 +99,8 @@ public class MATH {
 		return Errors.crashError;
 	    }
 	    if (error.equals(Errors.accessError)) {
-	    return Errors.accessError;
-	}
+		return Errors.accessError;
+	    }
 	    int value = Integer.parseInt(error.replace(Errors.valueError, ""));
 	    return Errors.valueError + value;
 

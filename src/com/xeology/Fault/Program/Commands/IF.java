@@ -16,7 +16,7 @@ public class IF {
 	if (command.length < 4) {
 	    return Errors.syntaxError;
 	}
-	if (!command[2].toLowerCase().equals("=")&&!command[2].toLowerCase().equals("!")) {
+	if (!command[2].toLowerCase().equals("=") && !command[2].toLowerCase().equals("!")) {
 	    return Errors.syntaxError;
 	}
 
@@ -36,13 +36,13 @@ public class IF {
 	    return error;
 	}
 
-	program.setIfsDeep(program.getIfsDeep()+1);
+	program.setIfsDeep(program.getIfsDeep() + 1);
 	if (command[2].toLowerCase().equals("=")) {
 	    return processIf(program, value, value2);
-	}else{
-	return processNegativeIf(program, value, value2);
+	} else {
+	    return processNegativeIf(program, value, value2);
 	}
-	
+
 
     }
 
@@ -51,7 +51,7 @@ public class IF {
 
 
 
-	    int value = Integer.parseInt(command[1 + offset]);	    
+	    int value = Integer.parseInt(command[1 + offset]);
 	    return Errors.valueError + value;
 
 
@@ -82,26 +82,25 @@ public class IF {
 	    if (error.equals(Errors.accessError)) {
 		return Errors.accessError;
 	    }
-	    int value = Integer.parseInt(error.replace(Errors.valueError, ""));	    
+	    int value = Integer.parseInt(error.replace(Errors.valueError, ""));
 	    return Errors.valueError + value;
 
 	}
     }
 
-    
     public static String processIf(Program program, int value, int value2) {
 
-	if (value!=value2){	    
+	if (value != value2) {
 	    program.setSkipping(true);
 	}
 
 	return Errors.okError;
 
     }
-    
+
     public static String processNegativeIf(Program program, int value, int value2) {
 
-	if (value==value2){	   
+	if (value == value2) {
 	    program.setSkipping(true);
 	}
 

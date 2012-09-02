@@ -39,7 +39,7 @@ public class DELETE {
 
 
 	    int value = Integer.parseInt(command[2]);
-	    if (value > Config.memory-1) {
+	    if (value > Config.memory - 1) {
 		program.getRound().addLog(program.getName() + " tried to access Invalid Memory Block " + value + ".");
 		return Errors.accessError;
 	    }
@@ -63,19 +63,18 @@ public class DELETE {
 
 
 
-	    if (command[2].toLowerCase().length()<3){
+	    if (command[2].toLowerCase().length() < 3) {
 		return Errors.syntaxError;
-	    } 
-	    String str="";
-	    if (command[2].toLowerCase().length()<4){
-		str=command[2].toLowerCase().substring(0, 3);
 	    }
-	    else{
-		str=command[2].toLowerCase().substring(0, 4);
-	    }	    
+	    String str = "";
+	    if (command[2].toLowerCase().length() < 4) {
+		str = command[2].toLowerCase().substring(0, 3);
+	    } else {
+		str = command[2].toLowerCase().substring(0, 4);
+	    }
 	    if (!str.contains("math") && !str.toLowerCase().contains("get") && !str.toLowerCase().contains("rand")) {
 		return Errors.syntaxError;
-	    }	    
+	    }
 	    String error = CommandHandler.process(program, command[2], true);
 	    if (error.equals(Errors.syntaxError)) {
 		return Errors.syntaxError;
@@ -84,10 +83,10 @@ public class DELETE {
 		return Errors.crashError;
 	    }
 	    if (error.equals(Errors.accessError)) {
-	    return Errors.accessError;
-	}
+		return Errors.accessError;
+	    }
 	    int value = Integer.parseInt(error.replace(Errors.valueError, ""));
-	    if (value > Config.memory-1) {
+	    if (value > Config.memory - 1) {
 		program.getRound().addLog(program.getName() + " tried to access Invalid Memory Block " + value + ".");
 		return Errors.accessError;
 	    }
@@ -103,22 +102,16 @@ public class DELETE {
 		return Errors.crashError;
 	    }
 	    if (error.equals(Errors.accessError)) {
-	    return Errors.accessError;
-	}
+		return Errors.accessError;
+	    }
 	    program.setCPUPoints(program.getCPUPoints() - 1);
 	    return Errors.okError;
 
 	}
     }
 
-    
-    
-    
-    
-    
-    
     public static String processCell(Program program, String[] command) {
-	
+
 
 
 	try {
@@ -126,7 +119,7 @@ public class DELETE {
 
 
 	    int value = Integer.parseInt(command[2]);
-	   value=CPURounder.round(program.getCell() +value, program);
+	    value = CPURounder.round(program.getCell() + value, program);
 	    if (value == program.getCell()) {
 		program.getRound().addLog(program.getName() + " tried to Delete it's own Cell.");
 		return Errors.accessError;
@@ -147,19 +140,18 @@ public class DELETE {
 
 
 
-	    if (command[2].toLowerCase().length()<3){
+	    if (command[2].toLowerCase().length() < 3) {
 		return Errors.syntaxError;
-	    } 
-	    String str="";
-	    if (command[2].toLowerCase().length()<4){
-		str=command[2].toLowerCase().substring(0, 3);
 	    }
-	    else{
-		str=command[2].toLowerCase().substring(0, 4);
-	    }	    
+	    String str = "";
+	    if (command[2].toLowerCase().length() < 4) {
+		str = command[2].toLowerCase().substring(0, 3);
+	    } else {
+		str = command[2].toLowerCase().substring(0, 4);
+	    }
 	    if (!str.contains("math") && !str.toLowerCase().contains("get") && !str.toLowerCase().contains("rand")) {
 		return Errors.syntaxError;
-	    }	    
+	    }
 	    String error = CommandHandler.process(program, command[2], true);
 	    if (error.equals(Errors.syntaxError)) {
 		return Errors.syntaxError;
@@ -168,10 +160,10 @@ public class DELETE {
 		return Errors.crashError;
 	    }
 	    if (error.equals(Errors.accessError)) {
-	    return Errors.accessError;
-	}
+		return Errors.accessError;
+	    }
 	    int value = Integer.parseInt(error.replace(Errors.valueError, ""));
-	    value=CPURounder.round(program.getCell() +value, program);
+	    value = CPURounder.round(program.getCell() + value, program);
 	    if (value == program.getCell()) {
 		program.getRound().addLog(program.getName() + " tried to Delete it's own Cell.");
 		return Errors.accessError;
@@ -184,8 +176,8 @@ public class DELETE {
 		return Errors.crashError;
 	    }
 	    if (error.equals(Errors.accessError)) {
-	    return Errors.accessError;
-	}
+		return Errors.accessError;
+	    }
 	    program.setCPUPoints(program.getCPUPoints() - 1);
 	    return Errors.okError;
 

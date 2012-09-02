@@ -18,7 +18,10 @@ public class GUIHandler {
     private Gui gui;
     private List<String> progList = new ArrayList<String>();
     private HashMap<String, Integer> cells;
+    private HashMap<String, String> colors;
     private int cell;
+    private HashMap<Integer, String> occs;
+    private HashMap<Integer, String> memoccs;
 
     public Gui getGUI() {
 	return gui;
@@ -36,11 +39,11 @@ public class GUIHandler {
 	int roundBars = (int) (percent * 25);
 	base = BigDecimal.valueOf(Config.cycles);
 	div = BigDecimal.valueOf(cycle);
-	percent = div.divide(base, 2, RoundingMode.HALF_UP).doubleValue();	
+	percent = div.divide(base, 2, RoundingMode.HALF_UP).doubleValue();
 	int cyclesBars = (int) (percent * 25);
 	base = BigDecimal.valueOf(Config.cells);
 	div = BigDecimal.valueOf(cell);
-	percent = div.divide(base, 2, RoundingMode.HALF_UP).doubleValue();	
+	percent = div.divide(base, 2, RoundingMode.HALF_UP).doubleValue();
 	int cellBars = (int) (percent * 25);
 	String out = "<html><body><font color=\"#33FF00\">&nbsp;&nbsp;&nbsp;Round&nbsp;&nbsp;&nbsp;[</font><font color=\"red\">";
 	for (int ctr = 0; ctr < roundBars; ctr++) {
@@ -48,57 +51,227 @@ public class GUIHandler {
 	}
 	for (int ctr = 0; ctr < (25 - roundBars); ctr++) {
 	    out = out + "&nbsp;";
-	    
+
 	}
-	out=out+"</font><font color =\"#33FF00\">]</font><font color=\"red\">&nbsp;&nbsp;&nbsp;"+ round + "</font><font color =\"#33FF00\"><br>";
-	out = out+"&nbsp;&nbsp;&nbsp;Cycle&nbsp;&nbsp;&nbsp;[</font><font color=\"red\">";
+	out = out + "</font><font color =\"#33FF00\">]</font><font color=\"red\">&nbsp;&nbsp;&nbsp;" + round + "</font><font color =\"#33FF00\"><br>";
+	out = out + "&nbsp;&nbsp;&nbsp;Cycle&nbsp;&nbsp;&nbsp;[</font><font color=\"red\">";
 	for (int ctr = 0; ctr < cyclesBars; ctr++) {
 	    out = out + "|";
 	}
 	for (int ctr = 0; ctr < (25 - cyclesBars); ctr++) {
 	    out = out + "&nbsp;";
-	    
+
 	}
-	out=out+"</font><font color =\"#33FF00\">]</font><font color=\"red\">&nbsp;&nbsp;&nbsp;"+ cycle + "</font><font color =\"#33FF00\"><br>";
-	out = out+"&nbsp;&nbsp;&nbsp;Cells&nbsp;&nbsp;&nbsp;[</font><font color=\"red\">";
+	out = out + "</font><font color =\"#33FF00\">]</font><font color=\"red\">&nbsp;&nbsp;&nbsp;" + cycle + "</font><font color =\"#33FF00\"><br>";
+	out = out + "&nbsp;&nbsp;&nbsp;Cells&nbsp;&nbsp;&nbsp;[</font><font color=\"red\">";
 	for (int ctr = 0; ctr < cellBars; ctr++) {
 	    out = out + "|";
 	}
 	for (int ctr = 0; ctr < (25 - cellBars); ctr++) {
 	    out = out + "&nbsp;";
-	    
-	}
-	out=out+"</font><font color =\"#33FF00\">]</font><font color=\"red\">&nbsp;&nbsp;&nbsp;"+ cell + "</font></body></html>";
-	gui.Current.setText(out);
-   
 
+	}
+	out = out + "</font><font color =\"#33FF00\">]</font><font color=\"red\">&nbsp;&nbsp;&nbsp;" + cell + "</font></body></html>";
+	gui.Current.setText(out);
+
+
+    }
+
+    public void updateOutput(String program, int amount) {
+	int val = 0;
+	if (cells.containsKey(program)) {
+	    val = cells.get(program);
+	    cells.remove(program);
+	}
+	if (val + amount < 0) {
+	    val = 0;
+	    amount = 0;
+	}
+	cells.put(program, val + amount);
+	updateOutput(progList, cells, false);
     }
 
     public void updateOutput(List<String> programs, HashMap<String, Integer> cells, boolean newRound) {
 	if (newRound) {
 	    progList = programs;
-	    return;
 	}
 	this.cells = (HashMap<String, Integer>) cells.clone();
-	String out = "<html><body><font color=\"#33FF00\">";
+
+	String out = "<html><body>";
 	for (String program : progList) {
+	    out = out + "<font color=\"" + colors.get(program) + "\">";
 	    int count = cells.get(program);
 	    BigDecimal base = BigDecimal.valueOf(Config.cells);
 	    BigDecimal div = BigDecimal.valueOf(count);
 	    double percent = div.divide(base, 2, RoundingMode.HALF_UP).doubleValue();
-	    percent = div.divide(base, 2, RoundingMode.HALF_UP).doubleValue();
 	    int bars = (int) (percent * 25);
-	    String string = "&nbsp;&nbsp;&nbsp;" + program + "&nbsp;&nbsp;&nbsp;[</font><font color=\"red\">";
+	    String string = "&nbsp;&nbsp;&nbsp;" + program + "&nbsp;&nbsp;&nbsp;</font><font color=\"#33ff00\">[</font><font color=\"red\">";
 	    for (int ctr = 0; ctr < bars; ctr++) {
 		string = string + "|";
 	    }
 	    for (int ctr = 0; ctr < (25 - bars); ctr++) {
 		string = string + "&nbsp;";
 	    }
-	    out = out + string + "</font><font color=\"#33FF00\">]</font><font color=\"red\">&nbsp;&nbsp;" + count + "<br></font><font color=\"#33FF00\">";
+	    out = out + string + "</font><font color=\"#33FF00\">]</font><font color=\"red\">&nbsp;&nbsp;" + count + "<br></font>";
 	}
 	out = out + "</font></body></html>";
 	gui.Output.setText(out);
+    }
+
+    public void newColors(List<Program> program) {
+	HashMap<String, String> colors = new HashMap<String, String>();
+	int ctr = 0;
+	for (Program prog : program) {
+	    if (ctr == 0) {
+		colors.put(prog.getName(), "blue");
+	    }
+	    if (ctr == 1) {
+		colors.put(prog.getName(), "green");
+	    }
+	    if (ctr == 2) {
+		colors.put(prog.getName(), "#FFF700");
+	    }
+	    if (ctr == 3) {
+		colors.put(prog.getName(), "#FFB83D");
+	    }
+	    if (ctr == 4) {
+		colors.put(prog.getName(), "#FF00FB");
+	    }
+	    ctr++;
+	}
+	colors.put("Corrupted.xVx.xVx", "red");
+	this.colors = colors;
+	occs = new HashMap<Integer, String>();
+	memoccs = new HashMap<Integer, String>();
+    }
+
+    public void updateCPU(String string, int cell) {
+	String bar = "<html><body>";
+	String color = "";
+	for (int ctr = 0; ctr < Config.cells; ctr++) {
+
+	    if (ctr == 0 || ctr == 100 || ctr == 200 || ctr == 300 || ctr == 400 || ctr == 500 || ctr == 600 || ctr == 700 || ctr == 800) {
+		color = color + "&nbsp;&nbsp;&nbsp;";
+	    }
+	    if (ctr == cell) {
+		if (string == null) {
+		    color = color + "<font color=\"#C4C4C4\">|</font>";
+		    if (occs.containsKey(ctr)) {
+			occs.remove(ctr);
+		    }
+		} else {
+		    color = color + "<font color=\"" + colors.get(string) + "\">|</font>";
+		    occs.put(ctr, string);
+		}
+
+	    } else {
+		if (occs.containsKey(ctr)) {
+		    color = color + "<font color=\"" + colors.get(occs.get(ctr)) + "\">|</font>";
+		} else {
+		    color = color + "<font color=\"#C4C4C4\">|</font>";
+		}
+	    }
+	    if (ctr == 99 || ctr == 199 || ctr == 299 || ctr == 399 || ctr == 499 || ctr == 599 || ctr == 699 || ctr == 799 || ctr == 899) {
+		color = color + "<br>";
+	    }
+	}
+	bar = bar + color + "</body></html>";
+	gui.CPU.setText(bar);
+	gui.CPU.repaint();
+    }
+
+    public void updateCPU(HashMap<Integer, String> cells) {
+	String bar = "<html><body>";
+	String color = "";
+	for (int ctr = 0; ctr < Config.cells; ctr++) {
+
+	    if (ctr == 0 || ctr == 100 || ctr == 200 || ctr == 300 || ctr == 400 || ctr == 500 || ctr == 600 || ctr == 700 || ctr == 800) {
+		color = color + "&nbsp;&nbsp;&nbsp;";
+	    }
+	    if (cells.containsKey(ctr)) {
+		color = color + "<font color=\"" + colors.get(cells.get(ctr)) + "\">|</font>";
+	    } else {
+		color = color + "<font color=\"#C4C4C4\">|</font>";
+	    }
+	    if (ctr == 99 || ctr == 199 || ctr == 299 || ctr == 399 || ctr == 499 || ctr == 599 || ctr == 699 || ctr == 799 || ctr == 899) {
+		color = color + "<br>";
+	    }
+	}
+	bar = bar + color + "</body></html>";
+	gui.CPU.setText(bar);
+	gui.CPU.repaint();
+
+    }
+
+    public void updateMemory(int block, int value, boolean corrupted, boolean locked) {
+	String bar = "<html><body>";
+	String color = "";
+	for (int ctr = 0; ctr < Config.memory; ctr++) {
+
+	    if (ctr == 0 || ctr == 100 || ctr == 200 || ctr == 300) {
+		color = color + "&nbsp;&nbsp;&nbsp;";
+	    }
+
+
+	    if (ctr != block && !memoccs.containsKey(ctr)) {
+		color = color + "<font color=\"#C4C4C4\">|</font>";
+	    }
+
+	    if (ctr != block && memoccs.containsKey(ctr)) {
+		color = color + "<font color=\"" + memoccs.get(ctr) + "\">|</font>";
+	    }
+
+	    if (ctr == block && !memoccs.containsKey(ctr)) {
+		if (corrupted) {
+		    color = color + "<font color=\"red\">|</font>";
+		    memoccs.put(ctr, "red");
+		}
+		if (locked) {
+		    color = color + "<font color=\"blue\">|</font>";
+		    memoccs.put(ctr, "blue");
+		}
+		if (!locked && !corrupted && value != 0) {
+		    color = color + "<font color=\"#33ff00\">|</font>";
+		    memoccs.put(ctr, "#33ff00");
+		}
+		if (!locked && !corrupted && value == 0) {
+		    color = color + "<font color=\"#C4C4C4\">|</font>";
+		    memoccs.put(ctr, "#C4C4C4");
+		}
+	    } else {
+
+		if (ctr == block && memoccs.containsKey(ctr)) {
+		    if (corrupted) {
+			color = color + "<font color=\"red\">|</font>";
+			memoccs.remove(ctr);
+			memoccs.put(ctr, "red");
+		    }
+		    if (locked) {
+			color = color + "<font color=\"blue\">|</font>";
+			memoccs.remove(ctr);
+			memoccs.put(ctr, "blue");
+		    }
+		    if (!locked && !corrupted && value != 0) {
+			color = color + "<font color=\"#33ff00\">|</font>";
+			memoccs.remove(ctr);
+			memoccs.put(ctr, "#33ff00");
+		    }
+		    if (!locked && !corrupted && value == 0) {
+			color = color + "<font color=\"#C4C4C4\">|</font>";
+			memoccs.remove(ctr);
+			memoccs.put(ctr, "#C4C4C4");
+		    }
+		}
+	    }
+
+
+	    if (ctr == 99 || ctr == 199 || ctr == 299) {
+		color = color + "<br>";
+	    }
+	}
+	bar = bar + color + "</body></html>";
+	gui.Memory.setText(bar);
+	gui.Memory.repaint();
 
     }
 

@@ -10,8 +10,8 @@ import com.xeology.Fault.Program.Program;
 public class CPURounder {
 
     public static int round(int value, Program program) {
-	if (value > Config.cells-1) {
-	    while (value > Config.cells-1) {
+	if (value > Config.cells - 1) {
+	    while (value > Config.cells - 1) {
 		value = value - Config.cells;
 	    }
 	    return value;
@@ -24,17 +24,17 @@ public class CPURounder {
 	}
 	return roundCheck(value);
     }
-    
+
     public static int roundCheck(int value) {
-	if (value > Config.cells-1) {
-	    while (value > Config.cells-1) {
-		value =value - Config.cells;
+	if (value > Config.cells - 1) {
+	    while (value > Config.cells - 1) {
+		value = value - Config.cells;
 	    }
 	    return value;
 	}
 	if (value < 0) {
 	    while (value < 0) {
-		value = Config.cells +  value;
+		value = Config.cells + value;
 	    }
 	    return value;
 	}

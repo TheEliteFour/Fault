@@ -1,4 +1,3 @@
-
 package com.xeology.Fault.Program;
 
 /**
@@ -13,5 +12,4 @@ public class Errors {
     public static String valueError = "0x3_";
     public static String pointError = "0x4";
     public static String accessError = "0x5";
-    
 }

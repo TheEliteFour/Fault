@@ -27,9 +27,13 @@ public class Gui extends javax.swing.JFrame {
     private void initComponents() {
 
         jLayeredPane1 = new javax.swing.JLayeredPane();
+        Memory = new javax.swing.JLabel();
+        CPU = new javax.swing.JLabel();
         Output = new javax.swing.JLabel();
         settings = new javax.swing.JLabel();
         Current = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -37,6 +41,16 @@ public class Gui extends javax.swing.JFrame {
         setResizable(false);
 
         jLayeredPane1.setFocusable(false);
+
+        Memory.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 255, 0)));
+        Memory.setFocusable(false);
+        Memory.setBounds(14, 514, 320, 70);
+        jLayeredPane1.add(Memory, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        CPU.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 255, 0)));
+        CPU.setFocusable(false);
+        CPU.setBounds(14, 314, 320, 170);
+        jLayeredPane1.add(CPU, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         Output.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 255, 0)));
         Output.setFocusable(false);
@@ -53,11 +67,21 @@ public class Gui extends javax.swing.JFrame {
         Current.setBounds(14, 10, 220, 70);
         jLayeredPane1.add(Current, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
+        jLabel1.setForeground(new java.awt.Color(51, 255, 0));
+        jLabel1.setText("Memory");
+        jLabel1.setBounds(20, 490, 60, 20);
+        jLayeredPane1.add(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        jLabel2.setForeground(new java.awt.Color(51, 255, 0));
+        jLabel2.setText("CPU");
+        jLabel2.setBounds(20, 290, 60, 20);
+        jLayeredPane1.add(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
         Background.setBackground(new java.awt.Color(0, 0, 0));
         Background.setForeground(new java.awt.Color(0, 255, 0));
         Background.setFocusable(false);
         Background.setOpaque(true);
-        Background.setBounds(0, 0, 420, 320);
+        Background.setBounds(0, 0, 420, 610);
         jLayeredPane1.add(Background, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -68,7 +92,7 @@ public class Gui extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLayeredPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+            .addComponent(jLayeredPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
         );
 
         pack();
@@ -110,8 +134,12 @@ public class Gui extends javax.swing.JFrame {
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Background;
+    public javax.swing.JLabel CPU;
     public javax.swing.JLabel Current;
+    public javax.swing.JLabel Memory;
     public javax.swing.JLabel Output;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLayeredPane jLayeredPane1;
     public javax.swing.JLabel settings;
     // End of variables declaration//GEN-END:variables

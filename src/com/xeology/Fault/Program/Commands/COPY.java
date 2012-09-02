@@ -24,13 +24,13 @@ public class COPY {
 
 
 	    int value = Integer.parseInt(command[1]);
-	    value = CPURounder.round(program.getCell() +value, program);
+	    value = CPURounder.round(program.getCell() + value, program);
 	    if (value == program.getCell()) {
 		program.getRound().addLog(program.getName() + " tried to copy onto it's self.");
 		return Errors.accessError;
-	    }	    
-	    Program clone=program.clone();
-	    String error2 = program.getRound().setCell( value,clone , program, false);
+	    }
+	    Program clone = program.clone();
+	    String error2 = program.getRound().setCell(value, clone, program, false);
 	    if (error2.equals(Errors.syntaxError)) {
 		return Errors.syntaxError;
 	    }
@@ -67,15 +67,15 @@ public class COPY {
 		return Errors.crashError;
 	    }
 	    if (error.equals(Errors.accessError)) {
-	    return Errors.accessError;
-	}
+		return Errors.accessError;
+	    }
 	    int value = Integer.parseInt(error.replace(Errors.valueError, ""));
-	    value = CPURounder.round(program.getCell() +value, program);
+	    value = CPURounder.round(program.getCell() + value, program);
 	    if (value == program.getCell()) {
 		program.getRound().addLog(program.getName() + " tried to copy onto it's self.");
 		return Errors.accessError;
 	    }
-	    Program clone=program.clone();
+	    Program clone = program.clone();
 	    String error2 = program.getRound().setCell(value, clone, program, false);
 	    if (error2.equals(Errors.syntaxError)) {
 		return Errors.syntaxError;
@@ -84,8 +84,8 @@ public class COPY {
 		return Errors.crashError;
 	    }
 	    if (error.equals(Errors.accessError)) {
-	    return Errors.accessError;
-	}
+		return Errors.accessError;
+	    }
 	    clone.setCell(value);
 	    program.setCPUPoints(program.getCPUPoints() - 8);
 	    return Errors.okError;
