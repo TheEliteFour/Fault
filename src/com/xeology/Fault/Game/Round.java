@@ -372,6 +372,11 @@ public class Round {
 			lockedBlocks[ctr] = false;
 		    }
 		}
+		boolean pause=gui.getGUI().Pause.isSelected();
+		while (pause) {
+		    pause=gui.getGUI().Pause.isSelected();
+		    System.out.println(pause);
+		}
 	    }
 	    for (Program program : cells) {
 		if (program == null) {
@@ -388,6 +393,7 @@ public class Round {
 		this.winners = winner.getWinner();
 		break;
 	    }
+
 	}
     }
 }

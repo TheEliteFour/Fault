@@ -100,7 +100,7 @@ public class Game {
 	    Log.write("Round " + (rctr + 1) + ": " + roundWinners[rctr] + " in " + roundCycles[rctr] + " CPU Cycles");
 	}
 	Log.write("//////////////////////////////////////");
-	gui.updateGameWinOutput(rounds, winHandle.getStringWinners(), winHandle.getWins());
+	gui.updateGameWinOutput(rounds, winHandle.getStringWinners(), winHandle.getWins());	
 	return;
     }
 

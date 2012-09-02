@@ -16,558 +16,1424 @@ Programs: Virus, Virus 2, Virus 3, Virus 4, Virus 5
 Round 1
 --------------------------------------
 
-Virus was given Cell 450
-Virus 2 was given Cell 495
-Virus 3 was given Cell 106
-Virus 4 was given Cell 40
-Virus 5 was given Cell 273
+Virus was given Cell 185
+Virus 2 was given Cell 308
+Virus 3 was given Cell 430
+Virus 4 was given Cell 147
+Virus 5 was given Cell 65
 
 * Beggining CPU Cycle 1 *
 
-- Executing Virus 4 in Cell 40
-Virus 4 Moved to Cell 41
-Virus 4 Moved to Cell 42
-Virus 4 Moved to Cell 43
-Virus 4 Moved to Cell 44
-Virus 4 Moved to Cell 43
-Virus 4 Moved to Cell 42
-Virus 4 Moved to Cell 41
-Virus 4 Moved to Cell 40
-- Executing Virus 3 in Cell 106
-Virus 3 Copied to Cell 108
-Virus 3 Corrupted Cell 203.
-Virus 3 suffered a Out of Points Error on LINE 3.
-- Executing Virus 5 in Cell 273
-Virus 5 Copied to Cell 276
+- Executing Virus 5 in Cell 65
+Virus 5 Copied to Cell 68
 Virus 5 Locked Memory Block 8 for a CPU Cache.
-Virus 5 Locked Memory Block 12 for a CPU Cache.
-Virus 5 Locked Memory Block 28 for a CPU Cache.
-Virus 5 aquired more CPU Points.
-Virus 5 Copied to Cell 270
-- Executing Virus in Cell 450
-Virus Copied to Cell 171
-Virus Put 1 into Memory Block 1.
-Virus Got 1 from Memory Block 1.
-Virus Moved to Cell 455
-Virus Corrupted Cell 167.
-- Executing Virus 2 in Cell 495
-Virus 2 Copied to Cell 43
-Virus 2 Put 1 into Memory Block 1.
-Virus 2 Got 1 from Memory Block 1.
-Virus 2 Moved to Cell 499
-Virus 2 Corrupted Memory Block 25.
-
-* Beggining CPU Cycle 2 *
-
-- Executing Virus 4 in Cell 40
-Virus 4 Moved to Cell 41
-Virus 4 Moved to Cell 42
-Virus 2 was destroyed in Cell 43 by Virus 4 overwriting it.
-Virus 4 Moved to Cell 44
-Virus 4 Moved to Cell 43
-Virus 4 Moved to Cell 42
-Virus 4 Moved to Cell 41
-Virus 4 Moved to Cell 40
-- Executing Virus 3 in Cell 108
-Virus 3 Copied to Cell 110
-Virus 3 Corrupted Cell 152.
-Virus 3 suffered a Out of Points Error on LINE 3.
-- Executing Virus in Cell 171
-Virus Copied to Cell 211
-Virus Put 1 into Memory Block 1.
-Virus Got 1 from Memory Block 1.
-Virus Moved to Cell 176
-Virus Corrupted Cell 292.
-- Executing Virus 5 in Cell 270
-Virus 5 was destroyed in Cell 273 by Virus 5 copying over it.
-Virus 5 Locked Memory Block 7 for a CPU Cache.
-Virus 5 Locked Memory Block 17 for a CPU Cache.
-Virus 5 Locked Memory Block 28 for a CPU Cache.
-Virus 5 aquired more CPU Points.
-Virus 5 Copied to Cell 267
-- Executing Virus 5 in Cell 276
-Virus 5 Copied to Cell 279
-Virus 5 Locked Memory Block 2 for a CPU Cache.
-Virus 5 Locked Memory Block 15 for a CPU Cache.
-Virus 5 Locked Memory Block 29 for a CPU Cache.
-Virus 5 aquired more CPU Points.
-Virus 5 was destroyed in Cell 273 by Virus 5 copying over it.
-- Executing Virus in Cell 455
-Virus Copied to Cell 112
-Virus Put 1 into Memory Block 1.
-Virus Got 1 from Memory Block 1.
-Virus Moved to Cell 460
-Virus Corrupted Cell 159.
-- Executing Virus 2 in Cell 499
-Virus 2 Copied to Cell 63
-Virus 2 Put 1 into Memory Block 1.
-Virus 2 Got 1 from Memory Block 1.
-Virus 2 Moved to Cell 4
-Virus 2 Corrupted Memory Block 46.
-
-* Beggining CPU Cycle 3 *
-
-- Executing Virus 2 in Cell 4
-Virus 2 Copied to Cell 153
-Virus 2 Put 1 into Memory Block 1.
-Virus 2 Got 1 from Memory Block 1.
-Virus 2 Moved to Cell 9
-Virus 2 Corrupted Memory Block 28.
-- Executing Virus 4 in Cell 40
-Virus 4 Moved to Cell 41
-Virus 4 Moved to Cell 42
-Virus 4 Moved to Cell 43
-Virus 4 Moved to Cell 44
-Virus 4 Moved to Cell 43
-Virus 4 Moved to Cell 42
-Virus 4 Moved to Cell 41
-Virus 4 Moved to Cell 40
-- Executing Virus 2 in Cell 63
-Virus 2 Copied to Cell 248
-Virus 2 Put 1 into Memory Block 1.
-Virus 2 Got 1 from Memory Block 1.
-Virus 2 Moved to Cell 68
-Virus 2 Corrupted Memory Block 12.
-- Executing Virus 3 in Cell 110
-Virus was destroyed in Cell 112 by Virus 3 copying over it.
-Virus 3 Corrupted Cell 223.
-Virus 3 suffered a Out of Points Error on LINE 3.
-- Executing Virus in Cell 176
-Virus Copied to Cell 361
-Virus Put 1 into Memory Block 1.
-Virus Got 1 from Memory Block 1.
-Virus Moved to Cell 180
-Virus Corrupted Cell 275.
-- Executing Virus in Cell 211
-Virus Copied to Cell 331
-Virus Put 1 into Memory Block 1.
-Virus Got 1 from Memory Block 1.
-Virus Moved to Cell 216
-Virus Corrupted Cell 391.
-- Executing Virus 5 in Cell 267
-Virus 5 was destroyed in Cell 270 by Virus 5 copying over it.
-Virus 5 Locked Memory Block 7 for a CPU Cache.
-Virus 5 accessed Corrupted Memory Block 12.
-- Executing Virus 5 in Cell 273
-Virus 5 was destroyed in Cell 276 by Virus 5 copying over it.
-Virus 5 Locked Memory Block 6 for a CPU Cache.
-Virus 5 Locked Memory Block 16 for a CPU Cache.
-Virus 5 Locked Memory Block 23 for a CPU Cache.
-Virus 5 aquired more CPU Points.
-Virus 5 was destroyed in Cell 270 by Virus 5 copying over it.
-- Executing Virus 5 in Cell 279
-Virus 5 Copied to Cell 282
-Virus 5 Locked Memory Block 5 for a CPU Cache.
-Virus 5 Locked Memory Block 16 for a CPU Cache.
-Virus 5 accessed Corrupted Memory Block 25.
-- Executing Virus in Cell 460
-Virus 4 was destroyed in Cell 40 by Virus copying over it.
-Virus Put 1 into Memory Block 1.
-Virus Got 1 from Memory Block 1.
-Virus Moved to Cell 464
-Virus Corrupted Cell 67.
-
-* Beggining CPU Cycle 4 *
-
-- Executing Virus 2 in Cell 9
-Virus 2 Copied to Cell 215
-Virus 2 Put 1 into Memory Block 1.
-Virus 2 Got 1 from Memory Block 1.
-Virus 2 Moved to Cell 13
-Virus 2 Corrupted Memory Block 18.
-- Executing Virus in Cell 40
-Virus Copied to Cell 241
-Virus Put 1 into Memory Block 1.
-Virus Got 1 from Memory Block 1.
-Virus Moved to Cell 44
-Virus Corrupted Cell 55.
-- Executing Virus 2 in Cell 68
-Virus 2 Copied to Cell 221
-Virus 2 Put 1 into Memory Block 1.
-Virus 2 Got 1 from Memory Block 1.
-Virus 2 Moved to Cell 72
-Virus 2 Corrupted Memory Block 35.
-- Executing Virus 3 in Cell 112
-Virus 3 Copied to Cell 114
-Virus 3 Corrupted Cell 185.
-Virus 3 suffered a Out of Points Error on LINE 3.
-- Executing Virus 2 in Cell 153
-Virus 2 Copied to Cell 242
-Virus 2 Put 1 into Memory Block 1.
-Virus 2 Got 1 from Memory Block 1.
-Virus 2 Moved to Cell 157
-Virus 2 Corrupted Memory Block 23.
-- Executing Virus in Cell 180
-Virus Copied to Cell 388
-Virus Put 1 into Memory Block 1.
-Virus Got 1 from Memory Block 1.
-Virus Moved to Cell 184
-Virus Corrupted Cell 202.
-- Executing Virus in Cell 216
-Virus Copied to Cell 415
-Virus Put 1 into Memory Block 1.
-Virus Got 1 from Memory Block 1.
-Virus 2 was destroyed in Cell 221 by Virus overwriting it.
-Virus Corrupted Cell 392.
-- Executing Virus 2 in Cell 248
-Virus 2 Copied to Cell 353
-Virus 2 Put 1 into Memory Block 1.
-Virus 2 Got 1 from Memory Block 1.
-Virus 2 Moved to Cell 252
-Virus 2 Corrupted Memory Block 3.
-- Executing Virus 5 in Cell 270
-Virus 5 was destroyed in Cell 273 by Virus 5 copying over it.
-Virus 5 Locked Memory Block 0 for a CPU Cache.
-Virus 5 accessed Corrupted Memory Block 18.
-- Executing Virus 5 in Cell 276
-Virus 5 Copied to Cell 279
-Virus 5 Locked Memory Block 0 for a CPU Cache.
 Virus 5 Locked Memory Block 19 for a CPU Cache.
 Virus 5 Locked Memory Block 27 for a CPU Cache.
 Virus 5 aquired more CPU Points.
-Virus 5 was destroyed in Cell 273 by Virus 5 copying over it.
-- Executing Virus 5 in Cell 282
-Virus 5 Copied to Cell 285
-Virus 5 Locked Memory Block 9 for a CPU Cache.
-Virus 5 Locked Memory Block 14 for a CPU Cache.
-Virus 5 Locked Memory Block 24 for a CPU Cache.
-Virus 5 aquired more CPU Points.
-Virus 5 was destroyed in Cell 279 by Virus 5 copying over it.
-- Executing Virus in Cell 331
-Virus Copied to Cell 454
+Virus 5 Copied to Cell 62
+- Executing Virus 4 in Cell 147
+Virus 4 Moved to Cell 148
+Virus 4 Moved to Cell 149
+Virus 4 Moved to Cell 150
+Virus 4 Moved to Cell 151
+Virus 4 Moved to Cell 150
+Virus 4 Moved to Cell 149
+Virus 4 Moved to Cell 148
+Virus 4 Moved to Cell 147
+- Executing Virus in Cell 185
+Virus Copied to Cell 426
 Virus Put 1 into Memory Block 1.
 Virus Got 1 from Memory Block 1.
-Virus Moved to Cell 336
-Virus Corrupted Cell 418.
-- Executing Virus in Cell 361
-Virus Copied to Cell 392
-Virus accessed Corrupted Cell 392.
-Virus was destroyed in Cell 361 by Virus deleting it.
-- Executing Virus in Cell 464
-Virus Copied to Cell 491
-Virus Put 1 into Memory Block 1.
-Virus Got 1 from Memory Block 1.
-Virus Moved to Cell 468
-Virus Corrupted Cell 119.
-
-* Beggining CPU Cycle 5 *
-
-- Executing Virus 2 in Cell 13
-Virus 2 Copied to Cell 158
+Virus Moved to Cell 189
+Virus Corrupted Cell 333.
+- Executing Virus 2 in Cell 308
+Virus 2 Copied to Cell 33
 Virus 2 Put 1 into Memory Block 1.
 Virus 2 Got 1 from Memory Block 1.
-Virus 2 Moved to Cell 17
-Virus 2 Corrupted Memory Block 0.
-- Executing Virus in Cell 44
-Virus Copied to Cell 75
-Virus Put 1 into Memory Block 1.
-Virus Got 1 from Memory Block 1.
-Virus Moved to Cell 48
-Virus Corrupted Cell 49.
-- Executing Virus 2 in Cell 72
-Virus 2 Copied to Cell 161
-Virus 2 Put 1 into Memory Block 1.
-Virus 2 Got 1 from Memory Block 1.
-Virus 2 Moved to Cell 77
-Virus 2 Corrupted Memory Block 21.
-- Executing Virus 3 in Cell 114
-Virus 3 Copied to Cell 116
-Virus 3 Corrupted Cell 295.
+Virus 2 Moved to Cell 313
+Virus 2 Corrupted Memory Block 36.
+- Executing Virus 3 in Cell 430
+Virus 3 Copied to Cell 432
+Virus 3 Corrupted Cell 38.
 Virus 3 suffered a Out of Points Error on LINE 3.
-- Executing Virus 2 in Cell 157
-Virus 2 Copied to Cell 208
+
+* Beggining CPU Cycle 2 *
+
+- Executing Virus 2 in Cell 33
+Virus 2 Copied to Cell 261
 Virus 2 Put 1 into Memory Block 1.
 Virus 2 Got 1 from Memory Block 1.
-Virus 2 was destroyed in Cell 161 by Virus 2 overwriting it.
-Virus 2 Corrupted Memory Block 17.
-- Executing Virus in Cell 184
-Virus Copied to Cell 192
-Virus Put 1 into Memory Block 1.
-Virus Got 1 from Memory Block 1.
-Virus Moved to Cell 188
-Virus Corrupted Cell 428.
-- Executing Virus 2 in Cell 215
-Virus 2 Copied to Cell 333
-Virus 2 Put 1 into Memory Block 1.
-Virus 2 Got 1 from Memory Block 1.
-Virus 2 Moved to Cell 219
-Virus 2 Corrupted Memory Block 22.
-- Executing Virus in Cell 221
-Virus Copied to Cell 458
-Virus Put 1 into Memory Block 1.
-Virus Got 1 from Memory Block 1.
-Virus Moved to Cell 226
-Virus Corrupted Cell 244.
-- Executing Virus in Cell 241
-Virus Copied to Cell 264
-Virus Put 1 into Memory Block 1.
-Virus Got 1 from Memory Block 1.
-Virus Moved to Cell 246
-Virus Corrupted Cell 338.
-- Executing Virus 2 in Cell 242
-Virus 2 Copied to Cell 317
-Virus 2 Put 1 into Memory Block 1.
-Virus 2 Got 1 from Memory Block 1.
-Virus 2 Moved to Cell 247
-Virus 2 Corrupted Memory Block 4.
-- Executing Virus 2 in Cell 252
-Virus 2 Copied to Cell 420
-Virus 2 Put 1 into Memory Block 1.
-Virus 2 Got 1 from Memory Block 1.
-Virus 2 Moved to Cell 256
-Virus 2 Corrupted Memory Block 18.
-- Executing Virus 5 in Cell 273
-Virus 5 was destroyed in Cell 276 by Virus 5 copying over it.
-Virus 5 Locked Memory Block 5 for a CPU Cache.
-Virus 5 Locked Memory Block 15 for a CPU Cache.
-Virus 5 Locked Memory Block 27 for a CPU Cache.
-Virus 5 aquired more CPU Points.
-Virus 5 Copied to Cell 270
-- Executing Virus 5 in Cell 279
-Virus 5 was destroyed in Cell 282 by Virus 5 copying over it.
-Virus 5 accessed Corrupted Memory Block 3.
-- Executing Virus 5 in Cell 285
-Virus 5 Copied to Cell 288
-Virus 5 Locked Memory Block 1 for a CPU Cache.
+Virus 2 Moved to Cell 37
+Virus 2 Corrupted Memory Block 24.
+- Executing Virus 5 in Cell 62
+Virus 5 was destroyed in Cell 65 by Virus 5 copying over it.
+Virus 5 Locked Memory Block 8 for a CPU Cache.
 Virus 5 Locked Memory Block 14 for a CPU Cache.
-Virus 5 Locked Memory Block 26 for a CPU Cache.
+Virus 5 accessed Corrupted Memory Block 24.
+- Executing Virus 5 in Cell 68
+Virus 5 Copied to Cell 71
+Virus 5 Locked Memory Block 8 for a CPU Cache.
+Virus 5 Locked Memory Block 11 for a CPU Cache.
+Virus 5 Locked Memory Block 23 for a CPU Cache.
 Virus 5 aquired more CPU Points.
-Virus 5 was destroyed in Cell 282 by Virus 5 copying over it.
-- Executing Virus in Cell 336
-Virus Copied to Cell 21
-Virus Put 1 into Memory Block 1.
-Virus Got 1 from Memory Block 1.
-Virus Moved to Cell 340
-Virus Corrupted Cell 443.
-- Executing Virus 2 in Cell 353
-Virus 2 Copied to Cell 450
-Virus 2 Put 1 into Memory Block 1.
-Virus 2 Got 1 from Memory Block 1.
-Virus 2 Moved to Cell 358
-Virus 2 Corrupted Memory Block 40.
-- Executing Virus in Cell 388
-Virus Copied to Cell 72
-Virus Put 1 into Memory Block 1.
-Virus Got 1 from Memory Block 1.
-Virus Moved to Cell 392
-Virus Corrupted Cell 113.
-- Executing Virus in Cell 415
-Virus Copied to Cell 38
-Virus Put 1 into Memory Block 1.
-Virus Got 1 from Memory Block 1.
-Virus 2 was destroyed in Cell 420 by Virus overwriting it.
-Virus Corrupted Cell 97.
-- Executing Virus in Cell 454
-Virus Copied to Cell 129
-Virus Put 1 into Memory Block 1.
-Virus Got 1 from Memory Block 1.
-Virus was destroyed in Cell 458 by Virus overwriting it.
-Virus Corrupted Cell 71.
-- Executing Virus in Cell 468
-Virus Copied to Cell 108
-Virus Put 1 into Memory Block 1.
-Virus Got 1 from Memory Block 1.
-Virus Moved to Cell 472
-Virus Corrupted Cell 44.
-- Executing Virus in Cell 491
-Virus Copied to Cell 12
-Virus Put 1 into Memory Block 1.
-Virus Got 1 from Memory Block 1.
-Virus Moved to Cell 496
-Virus Corrupted Cell 196.
-
-* Beggining CPU Cycle 6 *
-
-- Executing Virus in Cell 12
-Virus was destroyed in Cell 129 by Virus copying over it.
-Virus Put 1 into Memory Block 1.
-Virus Got 1 from Memory Block 1.
-Virus Moved to Cell 16
-Virus Corrupted Cell 30.
-- Executing Virus 2 in Cell 17
-Virus 2 Copied to Cell 221
-Virus 2 Put 1 into Memory Block 1.
-Virus 2 Got 1 from Memory Block 1.
-Virus was destroyed in Cell 21 by Virus 2 overwriting it.
-Virus 2 accessed Corrupted Memory Block 40.
-- Executing Virus in Cell 38
-Virus Copied to Cell 126
-Virus Put 1 into Memory Block 1.
-Virus Got 1 from Memory Block 1.
-Virus Moved to Cell 43
-Virus Corrupted Cell 102.
-- Executing Virus in Cell 48
-Virus Copied to Cell 91
-Virus Put 1 into Memory Block 1.
-Virus Got 1 from Memory Block 1.
-Virus Moved to Cell 53
-Virus Corrupted Cell 148.
-- Executing Virus in Cell 72
-Virus Copied to Cell 305
-Virus Put 1 into Memory Block 1.
-Virus Got 1 from Memory Block 1.
-Virus 2 was destroyed in Cell 77 by Virus overwriting it.
-Virus Corrupted Cell 143.
-- Executing Virus in Cell 75
-Virus Copied to Cell 98
-Virus Put 1 into Memory Block 1.
-Virus Got 1 from Memory Block 1.
-Virus Moved to Cell 79
-Virus Corrupted Virus 5's Cell 276.
-- Executing Virus in Cell 108
-Virus Copied to Cell 233
-Virus Put 1 into Memory Block 1.
-Virus Got 1 from Memory Block 1.
-Virus Moved to Cell 113
-Virus accessed Corrupted Cell 113.
-Virus was destroyed in Cell 108 by Virus deleting it.
-- Executing Virus 3 in Cell 116
-Virus 3 Copied to Cell 118
-Virus 3 Corrupted Virus 5's Cell 273.
-Virus 3 suffered a Out of Points Error on LINE 3.
-- Executing Virus 2 in Cell 158
-Virus 2 Copied to Cell 198
-Virus 2 Put 1 into Memory Block 1.
-Virus 2 Got 1 from Memory Block 1.
-Virus 2 Moved to Cell 163
-Virus 2 Corrupted Memory Block 27.
-- Executing Virus 2 in Cell 161
-Virus 2 Copied to Cell 327
-Virus 2 Put 1 into Memory Block 1.
-Virus 2 Got 1 from Memory Block 1.
-Virus 2 Moved to Cell 166
-Virus 2 accessed Corrupted Memory Block 46.
-- Executing Virus in Cell 188
-Virus Copied to Cell 409
+Virus 5 was destroyed in Cell 65 by Virus 5 copying over it.
+- Executing Virus 4 in Cell 147
+Virus 4 Moved to Cell 148
+Virus 4 Moved to Cell 149
+Virus 4 Moved to Cell 150
+Virus 4 Moved to Cell 151
+Virus 4 Moved to Cell 150
+Virus 4 Moved to Cell 149
+Virus 4 Moved to Cell 148
+Virus 4 Moved to Cell 147
+- Executing Virus in Cell 189
+Virus Copied to Cell 342
 Virus Put 1 into Memory Block 1.
 Virus Got 1 from Memory Block 1.
 Virus Moved to Cell 193
-Virus Corrupted Cell 360.
-- Executing Virus in Cell 192
-Virus Copied to Cell 370
+Virus Corrupted Cell 277.
+- Executing Virus 2 in Cell 313
+Virus 2 Copied to Cell 436
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 317
+Virus 2 Corrupted Memory Block 32.
+- Executing Virus in Cell 426
+Virus Copied to Cell 160
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 430
+Virus Corrupted Cell 178.
+- Executing Virus 3 in Cell 432
+Virus 3 Copied to Cell 434
+Virus 3 Corrupted Cell 20.
+Virus 3 suffered a Out of Points Error on LINE 3.
+
+* Beggining CPU Cycle 3 *
+
+- Executing Virus 2 in Cell 37
+Virus 2 Copied to Cell 101
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 42
+Virus 2 Corrupted Memory Block 9.
+- Executing Virus 5 in Cell 65
+Virus 5 was destroyed in Cell 68 by Virus 5 copying over it.
+Virus 5 Locked Memory Block 3 for a CPU Cache.
+Virus 5 Locked Memory Block 11 for a CPU Cache.
+Virus 5 Locked Memory Block 29 for a CPU Cache.
+Virus 5 aquired more CPU Points.
+Virus 5 Copied to Cell 62
+- Executing Virus 5 in Cell 71
+Virus 5 Copied to Cell 74
+Virus 5 Locked Memory Block 3 for a CPU Cache.
+Virus 5 Locked Memory Block 19 for a CPU Cache.
+Virus 5 Locked Memory Block 28 for a CPU Cache.
+Virus 5 aquired more CPU Points.
+Virus 5 was destroyed in Cell 68 by Virus 5 copying over it.
+- Executing Virus 4 in Cell 147
+Virus 4 Moved to Cell 148
+Virus 4 Moved to Cell 149
+Virus 4 Moved to Cell 150
+Virus 4 Moved to Cell 151
+Virus 4 Moved to Cell 150
+Virus 4 Moved to Cell 149
+Virus 4 Moved to Cell 148
+Virus 4 Moved to Cell 147
+- Executing Virus in Cell 160
+Virus Copied to Cell 248
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 164
+Virus Corrupted Cell 328.
+- Executing Virus in Cell 193
+Virus Copied to Cell 195
 Virus Put 1 into Memory Block 1.
 Virus Got 1 from Memory Block 1.
 Virus Moved to Cell 197
-Virus Corrupted Cell 347.
-- Executing Virus 2 in Cell 208
-Virus 2 Copied to Cell 209
+Virus Corrupted Cell 199.
+- Executing Virus 2 in Cell 261
+Virus 2 Copied to Cell 348
 Virus 2 Put 1 into Memory Block 1.
 Virus 2 Got 1 from Memory Block 1.
-Virus 2 Moved to Cell 212
-Virus 2 Corrupted Memory Block 2.
-- Executing Virus 2 in Cell 219
-Virus 2 Copied to Cell 335
-Virus 2 Put 1 into Memory Block 1.
-Virus 2 Got 1 from Memory Block 1.
-Virus 2 Moved to Cell 224
-Virus 2 Corrupted Memory Block 37.
-- Executing Virus in Cell 226
-Virus Copied to Cell 480
-Virus Put 1 into Memory Block 1.
-Virus Got 1 from Memory Block 1.
-Virus Moved to Cell 230
-Virus Corrupted Cell 261.
-- Executing Virus in Cell 246
-Virus Copied to Cell 377
-Virus Put 1 into Memory Block 1.
-Virus Got 1 from Memory Block 1.
-Virus Moved to Cell 251
-Virus Corrupted Cell 363.
-- Executing Virus 2 in Cell 247
-Virus 2 Copied to Cell 422
-Virus 2 Put 1 into Memory Block 1.
-Virus 2 Got 1 from Memory Block 1.
-Virus 2 Moved to Cell 252
-Virus 2 Corrupted Memory Block 19.
-- Executing Virus 2 in Cell 256
-Virus 2 Copied to Cell 371
-Virus 2 Put 1 into Memory Block 1.
-Virus 2 Got 1 from Memory Block 1.
-Virus 2 Moved to Cell 261
-Virus 2 accessed Corrupted Cell 261.
-Virus 2 was destroyed in Cell 256 by Virus 2 deleting it.
-- Executing Virus in Cell 264
-Virus Copied to Cell 384
-Virus Put 1 into Memory Block 1.
-Virus Got 1 from Memory Block 1.
-Virus Moved to Cell 268
-Virus Corrupted Virus's Cell 16.
-- Executing Virus 5 in Cell 270
-Virus 5 Copied to Cell 273
-Virus 5 Locked Memory Block 9 for a CPU Cache.
-Virus 5 Locked Memory Block 15 for a CPU Cache.
-Virus 5 Locked Memory Block 24 for a CPU Cache.
-Virus 5 aquired more CPU Points.
-Virus 5 Copied to Cell 267
-- Executing Virus 5 in Cell 282
-Virus 5 was destroyed in Cell 285 by Virus 5 copying over it.
-Virus 5 Locked Memory Block 3 for a CPU Cache.
-Virus 5 Locked Memory Block 14 for a CPU Cache.
-Virus 5 Locked Memory Block 25 for a CPU Cache.
-Virus 5 aquired more CPU Points.
-Virus 5 Copied to Cell 279
-- Executing Virus 5 in Cell 288
-Virus 5 Copied to Cell 291
-Virus 5 Locked Memory Block 8 for a CPU Cache.
-Virus 5 Locked Memory Block 15 for a CPU Cache.
-Virus 5 accessed Corrupted Memory Block 22.
+Virus 2 Moved to Cell 266
+Virus 2 Corrupted Memory Block 6.
 - Executing Virus 2 in Cell 317
-Virus 2 Copied to Cell 322
+Virus 2 Copied to Cell 429
 Virus 2 Put 1 into Memory Block 1.
 Virus 2 Got 1 from Memory Block 1.
-Virus 2 Moved to Cell 321
-Virus 2 Corrupted Memory Block 16.
-- Executing Virus 2 in Cell 333
-Virus 2 Copied to Cell 50
-Virus 2 Put 1 into Memory Block 1.
-Virus 2 Got 1 from Memory Block 1.
-Virus 2 Moved to Cell 337
-Virus 2 Corrupted Memory Block 14.
-- Executing Virus in Cell 340
-Virus Copied to Cell 0
+Virus 2 Moved to Cell 322
+Virus 2 Corrupted Memory Block 4.
+- Executing Virus in Cell 342
+Virus Copied to Cell 413
 Virus Put 1 into Memory Block 1.
 Virus Got 1 from Memory Block 1.
-Virus Moved to Cell 344
-Virus Corrupted Cell 419.
-- Executing Virus 2 in Cell 358
-Virus 2 Copied to Cell 378
-Virus 2 Put 1 into Memory Block 1.
-Virus 2 Got 1 from Memory Block 1.
-Virus 2 Moved to Cell 363
-Virus 2 accessed Corrupted Cell 363.
-Virus 2 was destroyed in Cell 358 by Virus 2 deleting it.
-- Executing Virus in Cell 392
-Virus 3 was destroyed in Cell 118 by Virus copying over it.
+Virus Moved to Cell 347
+Virus Corrupted Cell 493.
+- Executing Virus in Cell 430
+Virus Copied to Cell 37
 Virus Put 1 into Memory Block 1.
 Virus Got 1 from Memory Block 1.
-Virus Moved to Cell 397
-Virus Corrupted Cell 18.
-- Executing Virus in Cell 420
+Virus 3 was destroyed in Cell 434 by Virus overwriting it.
+Virus Corrupted Cell 460.
+- Executing Virus 2 in Cell 436
+Virus was destroyed in Cell 164 by Virus 2 copying over it.
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 440
+Virus 2 Corrupted Memory Block 27.
+
+* Beggining CPU Cycle 4 *
+
+- Executing Virus in Cell 37
+Virus Copied to Cell 201
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 41
+Virus Corrupted Cell 244.
+- Executing Virus 2 in Cell 42
+Virus 2 Copied to Cell 243
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 46
+Virus 2 Corrupted Memory Block 47.
+- Executing Virus 5 in Cell 62
+Virus 5 was destroyed in Cell 65 by Virus 5 copying over it.
+Virus 5 Locked Memory Block 0 for a CPU Cache.
+Virus 5 Locked Memory Block 18 for a CPU Cache.
+Virus 5 Locked Memory Block 22 for a CPU Cache.
+Virus 5 aquired more CPU Points.
+Virus 5 Copied to Cell 59
+- Executing Virus 5 in Cell 68
+Virus 5 was destroyed in Cell 71 by Virus 5 copying over it.
+Virus 5 accessed Corrupted Memory Block 9.
+- Executing Virus 5 in Cell 74
+Virus 5 Copied to Cell 77
+Virus 5 Locked Memory Block 3 for a CPU Cache.
+Virus 5 Locked Memory Block 18 for a CPU Cache.
+Virus 5 Locked Memory Block 26 for a CPU Cache.
+Virus 5 aquired more CPU Points.
+Virus 5 was destroyed in Cell 71 by Virus 5 copying over it.
+- Executing Virus 2 in Cell 101
+Virus 2 Copied to Cell 355
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 105
+Virus 2 Corrupted Memory Block 3.
+- Executing Virus 4 in Cell 147
+Virus 4 Moved to Cell 148
+Virus 4 Moved to Cell 149
+Virus 4 Moved to Cell 150
+Virus 4 Moved to Cell 151
+Virus 4 Moved to Cell 150
+Virus 4 Moved to Cell 149
+Virus 4 Moved to Cell 148
+Virus 4 Moved to Cell 147
+- Executing Virus 2 in Cell 164
+Virus 2 Copied to Cell 253
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 169
+Virus 2 Corrupted Memory Block 41.
+- Executing Virus in Cell 195
+Virus Copied to Cell 398
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 200
+Virus Corrupted Cell 314.
+- Executing Virus in Cell 197
+Virus Copied to Cell 203
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus was destroyed in Cell 201 by Virus overwriting it.
+Virus Corrupted Cell 215.
+- Executing Virus in Cell 248
+Virus Copied to Cell 478
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus 2 was destroyed in Cell 253 by Virus overwriting it.
+Virus Corrupted Cell 346.
+- Executing Virus 2 in Cell 266
+Virus 2 Copied to Cell 306
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 270
+Virus 2 Corrupted Memory Block 40.
+- Executing Virus 2 in Cell 322
+Virus 2 Copied to Cell 351
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 326
+Virus 2 Corrupted Memory Block 11.
+- Executing Virus in Cell 347
+Virus Copied to Cell 452
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 352
+Virus Corrupted Cell 378.
+- Executing Virus 2 in Cell 348
+Virus 2 Copied to Cell 80
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 353
+Virus 2 Corrupted Memory Block 43.
+- Executing Virus in Cell 413
+Virus Copied to Cell 117
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 418
+Virus Corrupted Cell 482.
+- Executing Virus 2 in Cell 429
+Virus 2 Copied to Cell 35
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 433
+Virus 2 Corrupted Memory Block 21.
+- Executing Virus in Cell 434
+Virus Copied to Cell 10
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 439
+Virus Corrupted Cell 144.
+- Executing Virus 2 in Cell 440
+Virus 2 Copied to Cell 178
+Virus 2 accessed Corrupted Cell 178.
+Virus 2 was destroyed in Cell 440 by Virus 2 deleting it.
+
+* Beggining CPU Cycle 5 *
+
+- Executing Virus in Cell 10
 Virus Copied to Cell 63
 Virus Put 1 into Memory Block 1.
 Virus Got 1 from Memory Block 1.
-Virus Moved to Cell 424
-Virus Corrupted Cell 136.
-- Executing Virus 2 in Cell 450
-Virus 2 Copied to Cell 459
+Virus Moved to Cell 14
+Virus Corrupted Cell 141.
+- Executing Virus 2 in Cell 35
+Virus 5 was destroyed in Cell 65 by Virus 2 copying over it.
 Virus 2 Put 1 into Memory Block 1.
 Virus 2 Got 1 from Memory Block 1.
-Virus 2 Moved to Cell 454
-Virus 2 Corrupted Memory Block 5.
-- Executing Virus in Cell 458
-Virus Copied to Cell 46
+Virus 2 Moved to Cell 40
+Virus 2 Corrupted Memory Block 35.
+- Executing Virus in Cell 41
+Virus Copied to Cell 267
 Virus Put 1 into Memory Block 1.
 Virus Got 1 from Memory Block 1.
-Virus Moved to Cell 463
-Virus Corrupted Cell 116.
-- Executing Virus in Cell 472
-Virus Copied to Cell 104
+Virus 2 was destroyed in Cell 46 by Virus overwriting it.
+Virus Corrupted Cell 66.
+- Executing Virus 5 in Cell 59
+Virus 5 was destroyed in Cell 62 by Virus 5 copying over it.
+Virus 5 accessed Corrupted Memory Block 3.
+- Executing Virus 5 in Cell 71
+Virus 5 was destroyed in Cell 74 by Virus 5 copying over it.
+Virus 5 accessed Corrupted Memory Block 4.
+- Executing Virus 5 in Cell 77
+Virus 2 was destroyed in Cell 80 by Virus 5 copying over it.
+Virus 5 Locked Memory Block 5 for a CPU Cache.
+Virus 5 Locked Memory Block 15 for a CPU Cache.
+Virus 5 accessed Corrupted Memory Block 27.
+- Executing Virus 2 in Cell 105
+Virus 2 Copied to Cell 128
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 110
+Virus 2 Corrupted Memory Block 2.
+- Executing Virus in Cell 117
+Virus Copied to Cell 361
 Virus Put 1 into Memory Block 1.
 Virus Got 1 from Memory Block 1.
-Virus Moved to Cell 476
-Virus Corrupted Cell 173.
-- Executing Virus in Cell 496
-Virus Copied to Cell 158
+Virus Moved to Cell 121
+Virus Corrupted Cell 220.
+- Executing Virus 4 in Cell 147
+Virus 4 Moved to Cell 148
+Virus 4 Moved to Cell 149
+Virus 4 Moved to Cell 150
+Virus 4 Moved to Cell 151
+Virus 4 Moved to Cell 150
+Virus 4 Moved to Cell 149
+Virus 4 Moved to Cell 148
+Virus 4 Moved to Cell 147
+- Executing Virus 2 in Cell 169
+Virus 2 Copied to Cell 215
+Virus 2 accessed Corrupted Cell 215.
+Virus 2 was destroyed in Cell 169 by Virus 2 deleting it.
+- Executing Virus in Cell 200
+Virus Copied to Cell 365
 Virus Put 1 into Memory Block 1.
 Virus Got 1 from Memory Block 1.
-Virus was destroyed in Cell 0 by Virus overwriting it.
+Virus Moved to Cell 205
+Virus Corrupted Virus 2's Cell 270.
+- Executing Virus in Cell 201
+Virus Copied to Cell 334
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus was destroyed in Cell 205 by Virus overwriting it.
+Virus tried to Corrupt it's own Cell.
+- Executing Virus in Cell 203
+Virus Copied to Cell 421
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 207
+Virus Corrupted Cell 339.
+- Executing Virus 2 in Cell 243
+Virus 2 Copied to Cell 262
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 248
+Virus 2 Corrupted Memory Block 8.
+- Executing Virus in Cell 253
+Virus 2 was destroyed in Cell 326 by Virus copying over it.
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 257
+Virus Corrupted Cell 370.
+- Executing Virus 2 in Cell 306
+Virus 2 Copied to Cell 491
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 311
+Virus 2 Corrupted Memory Block 31.
+- Executing Virus 2 in Cell 351
+Virus 2 Copied to Cell 364
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 was destroyed in Cell 355 by Virus 2 overwriting it.
+Virus 2 Corrupted Memory Block 9.
+- Executing Virus in Cell 352
+Virus Copied to Cell 77
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 357
+Virus Corrupted Cell 386.
+- Executing Virus 2 in Cell 353
+Virus 2 Copied to Cell 492
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus was destroyed in Cell 357 by Virus 2 overwriting it.
+Virus 2 accessed Corrupted Memory Block 31.
+- Executing Virus in Cell 398
+Virus Copied to Cell 20
+Virus accessed Corrupted Cell 20.
+Virus was destroyed in Cell 398 by Virus deleting it.
+- Executing Virus in Cell 418
+Virus Copied to Cell 485
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 422
+Virus Corrupted Cell 5.
+- Executing Virus 2 in Cell 433
+Virus 2 Copied to Cell 93
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 438
+Virus 2 Corrupted Memory Block 12.
+- Executing Virus in Cell 439
+Virus Copied to Cell 475
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 443
+Virus Corrupted Cell 83.
+- Executing Virus in Cell 452
+Virus Copied to Cell 116
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 457
+Virus Corrupted Cell 56.
+- Executing Virus in Cell 478
+Virus Copied to Cell 496
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 483
+Virus Corrupted Cell 164.
+
+* Beggining CPU Cycle 6 *
+
+- Executing Virus in Cell 14
+Virus was destroyed in Cell 46 by Virus copying over it.
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 18
+Virus Corrupted Cell 195.
+- Executing Virus 2 in Cell 40
+Virus 2 Copied to Cell 148
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 45
+Virus 2 Corrupted Memory Block 27.
+- Executing Virus 5 in Cell 62
+Virus 2 was destroyed in Cell 65 by Virus 5 copying over it.
+Virus 5 Locked Memory Block 5 for a CPU Cache.
+Virus 5 Locked Memory Block 17 for a CPU Cache.
+Virus 5 Locked Memory Block 23 for a CPU Cache.
+Virus 5 aquired more CPU Points.
+Virus 5 Copied to Cell 59
+- Executing Virus in Cell 63
+Virus Copied to Cell 265
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 68
+Virus Corrupted Cell 133.
+- Executing Virus 5 in Cell 74
+Virus was destroyed in Cell 77 by Virus 5 copying over it.
+Virus 5 Locked Memory Block 7 for a CPU Cache.
+Virus 5 Locked Memory Block 18 for a CPU Cache.
+Virus 5 accessed Corrupted Memory Block 21.
+- Executing Virus 5 in Cell 80
+Virus 5 Copied to Cell 83
+Virus 5 accessed Corrupted Cell 83.
+Virus 5 was destroyed in Cell 80 by Virus 5 deleting it.
+- Executing Virus 2 in Cell 93
+Virus 2 Copied to Cell 151
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 97
+Virus 2 accessed Corrupted Memory Block 2.
+- Executing Virus 2 in Cell 110
+Virus 2 was destroyed in Cell 151 by Virus 2 copying over it.
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 114
+Virus 2 accessed Corrupted Memory Block 27.
+- Executing Virus in Cell 116
+Virus Copied to Cell 296
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus was destroyed in Cell 121 by Virus overwriting it.
+Virus Corrupted Cell 271.
+- Executing Virus 2 in Cell 128
+Virus 2 Copied to Cell 373
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 132
+Virus 2 accessed Corrupted Memory Block 47.
+- Executing Virus 4 in Cell 147
+Virus 2 was destroyed in Cell 148 by Virus 4 overwriting it.
+Virus 4 Moved to Cell 149
+Virus 4 Moved to Cell 150
+Virus 2 was destroyed in Cell 151 by Virus 4 overwriting it.
+Virus 4 Moved to Cell 150
+Virus 4 Moved to Cell 149
+Virus 4 Moved to Cell 148
+Virus 4 Moved to Cell 147
+- Executing Virus in Cell 207
+Virus Copied to Cell 301
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 212
+Virus Corrupted Cell 269.
+- Executing Virus 2 in Cell 248
+Virus 2 Copied to Cell 463
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 252
+Virus 2 Corrupted Memory Block 1.
+- Executing Virus in Cell 257
+Virus Copied to Cell 418
+Virus accessed Corrupted Memory Block 1.
+- Executing Virus 2 in Cell 262
+Virus 2 Copied to Cell 320
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 266
+Virus 2 Corrupted Memory Block 37.
+- Executing Virus in Cell 267
+Virus Copied to Cell 442
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 272
+Virus Corrupted Cell 420.
+- Executing Virus 2 in Cell 311
+Virus 2 Copied to Cell 448
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 316
+Virus 2 accessed Corrupted Memory Block 43.
+- Executing Virus in Cell 326
+Virus Copied to Cell 404
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 330
+Virus Corrupted Cell 429.
+- Executing Virus in Cell 334
+Virus Copied to Cell 377
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 339
+Virus accessed Corrupted Cell 339.
+Virus was destroyed in Cell 334 by Virus deleting it.
+- Executing Virus 2 in Cell 355
+Virus 2 Copied to Cell 19
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 359
+Virus 2 accessed Corrupted Memory Block 32.
+- Executing Virus in Cell 361
+Virus 2 was destroyed in Cell 492 by Virus copying over it.
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 366
+Virus Corrupted Cell 452.
+- Executing Virus 2 in Cell 364
+Virus 2 Copied to Cell 481
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 368
+Virus 2 accessed Corrupted Memory Block 35.
+- Executing Virus in Cell 365
+Virus Copied to Cell 43
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 369
+Virus Corrupted Cell 488.
+- Executing Virus in Cell 421
+Virus Copied to Cell 173
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 425
+Virus Corrupted Cell 498.
+- Executing Virus in Cell 422
+Virus Copied to Cell 109
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 426
+Virus Corrupted Virus's Cell 442.
+- Executing Virus 2 in Cell 438
+Virus 2 Copied to Cell 41
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 442
+Virus 2 Corrupted Memory Block 4.
+- Executing Virus in Cell 443
+Virus Copied to Cell 61
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 447
+Virus accessed Corrupted Cell 141.
+- Executing Virus in Cell 457
+Virus Copied to Cell 487
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 461
+Virus accessed Corrupted Cell 133.
+- Executing Virus in Cell 475
+Virus Copied to Cell 49
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 479
+Virus Corrupted Virus's Cell 483.
+- Executing Virus in Cell 485
+Virus Copied to Cell 140
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 490
+Virus Corrupted Cell 238.
+- Executing Virus 2 in Cell 491
+Virus 2 Copied to Cell 12
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus was destroyed in Cell 496 by Virus 2 overwriting it.
+Virus 2 Corrupted Memory Block 13.
+
+* Beggining CPU Cycle 7 *
+
+- Executing Virus 2 in Cell 12
+Virus 2 Copied to Cell 244
+Virus 2 accessed Corrupted Cell 244.
+Virus 2 was destroyed in Cell 12 by Virus 2 deleting it.
+- Executing Virus in Cell 18
+Virus Copied to Cell 180
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 23
+Virus accessed Corrupted Cell 238.
+- Executing Virus 2 in Cell 19
+Virus 2 Copied to Cell 217
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 24
+Virus 2 Corrupted Memory Block 0.
+- Executing Virus 2 in Cell 41
+Virus 2 Copied to Cell 64
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus was destroyed in Cell 46 by Virus 2 overwriting it.
+Virus 2 accessed Corrupted Memory Block 9.
+- Executing Virus in Cell 43
+Virus Copied to Cell 274
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 48
+Virus Corrupted Cell 161.
+- Executing Virus 2 in Cell 45
+Virus 2 Copied to Cell 71
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus was destroyed in Cell 49 by Virus 2 overwriting it.
+Virus 2 Corrupted Memory Block 9.
+- Executing Virus 5 in Cell 59
+Virus 5 was destroyed in Cell 62 by Virus 5 copying over it.
+Virus 5 accessed Corrupted Memory Block 6.
+- Executing Virus in Cell 61
+Virus 5 was destroyed in Cell 65 by Virus copying over it.
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 66
+Virus accessed Corrupted Cell 66.
+Virus was destroyed in Cell 61 by Virus deleting it.
+- Executing Virus in Cell 68
+Virus Copied to Cell 139
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 72
+Virus Corrupted Cell 108.
+- Executing Virus 5 in Cell 77
+Virus 5 Copied to Cell 80
+Virus 5 Locked Memory Block 6 for a CPU Cache.
+Virus 5 accessed Corrupted Memory Block 13.
+- Executing Virus in Cell 109
+Virus Copied to Cell 230
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 113
+Virus Corrupted Cell 194.
+- Executing Virus in Cell 121
+Virus Copied to Cell 250
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 126
+Virus Corrupted Cell 334.
+- Executing Virus in Cell 140
+Virus Copied to Cell 188
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 145
+Virus Corrupted Cell 281.
+- Executing Virus 4 in Cell 147
+Virus 4 Moved to Cell 148
+Virus 4 Moved to Cell 149
+Virus 4 Moved to Cell 150
+Virus 4 Moved to Cell 151
+Virus 4 Moved to Cell 150
+Virus 4 Moved to Cell 149
+Virus 4 Moved to Cell 148
+Virus 4 Moved to Cell 147
+- Executing Virus in Cell 173
+Virus Copied to Cell 311
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 178
+Virus Corrupted Cell 407.
+- Executing Virus in Cell 212
+Virus Copied to Cell 325
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 216
+Virus Corrupted Cell 327.
+- Executing Virus 2 in Cell 252
+Virus 2 Copied to Cell 343
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 257
+Virus 2 Corrupted Memory Block 24.
+- Executing Virus in Cell 265
+Virus Copied to Cell 306
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 269
+Virus accessed Corrupted Cell 269.
+Virus was destroyed in Cell 265 by Virus deleting it.
+- Executing Virus 2 in Cell 266
+Virus was destroyed in Cell 490 by Virus 2 copying over it.
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 271
+Virus 2 accessed Corrupted Cell 271.
+Virus 2 was destroyed in Cell 266 by Virus 2 deleting it.
+- Executing Virus in Cell 272
+Virus Copied to Cell 337
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 277
+Virus accessed Corrupted Cell 277.
+Virus was destroyed in Cell 272 by Virus deleting it.
+- Executing Virus in Cell 296
+Virus Copied to Cell 364
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus was destroyed in Cell 301 by Virus overwriting it.
+Virus Corrupted Virus's Cell 479.
+- Executing Virus 2 in Cell 320
+Virus 2 Copied to Cell 372
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 324
+Virus 2 Corrupted Memory Block 35.
+- Executing Virus in Cell 330
+Virus Copied to Cell 493
+Virus accessed Corrupted Cell 493.
+Virus was destroyed in Cell 330 by Virus deleting it.
+- Executing Virus in Cell 366
+Virus Copied to Cell 45
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 370
+Virus accessed Corrupted Cell 370.
+Virus was destroyed in Cell 366 by Virus deleting it.
+- Executing Virus in Cell 369
+Virus Copied to Cell 95
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 374
+Virus Corrupted Cell 40.
+- Executing Virus 2 in Cell 373
+Virus 2 Copied to Cell 376
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 378
+Virus 2 accessed Corrupted Cell 378.
+Virus 2 was destroyed in Cell 373 by Virus 2 deleting it.
+- Executing Virus in Cell 377
+Virus Copied to Cell 470
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 382
+Virus Corrupted Cell 54.
+- Executing Virus in Cell 404
+Virus Copied to Cell 491
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 409
+Virus Corrupted Cell 138.
+- Executing Virus in Cell 418
+Virus Copied to Cell 78
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 422
+Virus Corrupted Cell 475.
+- Executing Virus in Cell 425
+Virus Copied to Cell 9
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 429
+Virus accessed Corrupted Cell 429.
+Virus was destroyed in Cell 425 by Virus deleting it.
+- Executing Virus in Cell 426
+Virus Copied to Cell 111
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 430
+Virus Corrupted Cell 146.
+- Executing Virus 2 in Cell 442
+Virus was destroyed in Cell 9 by Virus 2 copying over it.
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 447
+Virus 2 Corrupted Memory Block 47.
+- Executing Virus 2 in Cell 448
+Virus 2 Copied to Cell 15
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 453
+Virus 2 Corrupted Memory Block 27.
+- Executing Virus 2 in Cell 463
+Virus 2 Copied to Cell 196
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 468
+Virus 2 accessed Corrupted Memory Block 11.
+- Executing Virus 2 in Cell 481
+Virus 2 Copied to Cell 86
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 486
+Virus 2 Corrupted Memory Block 26.
+- Executing Virus in Cell 487
+Virus Copied to Cell 119
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus was destroyed in Cell 491 by Virus overwriting it.
+Virus Corrupted Virus 2's Cell 64.
+- Executing Virus in Cell 492
+Virus Copied to Cell 161
+Virus accessed Corrupted Cell 161.
+Virus was destroyed in Cell 492 by Virus deleting it.
+- Executing Virus 2 in Cell 496
+Virus 2 Copied to Cell 30
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 1
+Virus 2 Corrupted Memory Block 6.
+
+* Beggining CPU Cycle 8 *
+
+- Executing Virus 2 in Cell 1
+Virus 2 Copied to Cell 34
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 6
+Virus 2 Corrupted Memory Block 13.
+- Executing Virus 2 in Cell 9
+Virus 2 Copied to Cell 41
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 13
+Virus 2 Corrupted Memory Block 46.
+- Executing Virus 2 in Cell 15
+Virus 2 Copied to Cell 136
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 19
+Virus 2 Corrupted Memory Block 31.
+- Executing Virus 2 in Cell 24
+Virus 2 Copied to Cell 79
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 29
+Virus 2 Corrupted Memory Block 17.
+- Executing Virus 2 in Cell 30
+Virus 2 Copied to Cell 276
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 35
+Virus 2 Corrupted Memory Block 14.
+- Executing Virus in Cell 45
+Virus Copied to Cell 256
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus 2 was destroyed in Cell 49 by Virus overwriting it.
+Virus Corrupted Cell 295.
+- Executing Virus in Cell 48
+Virus Copied to Cell 265
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 52
+Virus Corrupted Cell 104.
+- Executing Virus 5 in Cell 62
+Virus was destroyed in Cell 65 by Virus 5 copying over it.
+Virus 5 Locked Memory Block 7 for a CPU Cache.
+Virus 5 Locked Memory Block 11 for a CPU Cache.
+Virus 5 Locked Memory Block 28 for a CPU Cache.
+Virus 5 aquired more CPU Points.
+Virus 5 Copied to Cell 59
+- Executing Virus 2 in Cell 71
+Virus 2 Copied to Cell 125
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 75
+Virus 2 Corrupted Memory Block 20.
+- Executing Virus in Cell 72
+Virus Copied to Cell 281
+Virus accessed Corrupted Cell 281.
+Virus was destroyed in Cell 72 by Virus deleting it.
+- Executing Virus in Cell 78
+Virus Copied to Cell 110
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 82
+Virus tried to Corrupt it's own Cell.
+- Executing Virus 5 in Cell 80
+Virus 5 Copied to Cell 83
+Virus 5 accessed Corrupted Memory Block 4.
+- Executing Virus 2 in Cell 86
+Virus was destroyed in Cell 113 by Virus 2 copying over it.
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 90
+Virus 2 accessed Corrupted Memory Block 17.
+- Executing Virus in Cell 95
+Virus Copied to Cell 208
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 100
+Virus Corrupted Cell 281.
+- Executing Virus in Cell 111
+Virus Copied to Cell 350
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 115
+Virus Corrupted Cell 318.
+- Executing Virus in Cell 119
+Virus Copied to Cell 318
+Virus accessed Corrupted Cell 318.
+Virus was destroyed in Cell 119 by Virus deleting it.
+- Executing Virus in Cell 126
+Virus Copied to Cell 202
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 130
+Virus Corrupted Cell 302.
+- Executing Virus in Cell 139
+Virus was destroyed in Cell 301 by Virus copying over it.
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 144
+Virus accessed Corrupted Cell 144.
+Virus was destroyed in Cell 139 by Virus deleting it.
+- Executing Virus in Cell 145
+Virus Copied to Cell 251
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 150
+Virus Corrupted Cell 181.
+- Executing Virus 4 in Cell 147
+Virus 4 Moved to Cell 148
+Virus 4 Moved to Cell 149
+Virus was destroyed in Cell 150 by Virus 4 overwriting it.
+Virus 4 Moved to Cell 151
+Virus 4 Moved to Cell 150
+Virus 4 Moved to Cell 149
+Virus 4 Moved to Cell 148
+Virus 4 Moved to Cell 147
+- Executing Virus in Cell 178
+Virus Copied to Cell 396
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 182
+Virus Corrupted Cell 312.
+- Executing Virus in Cell 180
+Virus Copied to Cell 293
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 184
+Virus Corrupted Cell 389.
+- Executing Virus in Cell 188
+Virus Copied to Cell 384
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 193
+Virus Corrupted Virus's Cell 230.
+- Executing Virus 2 in Cell 196
+Virus 2 Copied to Cell 310
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 201
+Virus 2 Corrupted Memory Block 30.
+- Executing Virus in Cell 216
+Virus Copied to Cell 308
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 221
+Virus Corrupted Virus's Cell 265.
+- Executing Virus 2 in Cell 217
+Virus 2 Copied to Cell 414
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 222
+Virus 2 Corrupted Memory Block 7.
+- Executing Virus in Cell 250
+Virus Copied to Cell 381
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 254
+Virus Corrupted Cell 342.
+- Executing Virus 2 in Cell 257
+Virus 2 Copied to Cell 326
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 261
+Virus 2 accessed Corrupted Memory Block 24.
+- Executing Virus in Cell 274
+Virus Copied to Cell 446
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 279
+Virus Corrupted Cell 370.
+- Executing Virus in Cell 306
+Virus Copied to Cell 459
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus was destroyed in Cell 311 by Virus overwriting it.
+Virus accessed Corrupted Cell 386.
+- Executing Virus 2 in Cell 324
+Virus was destroyed in Cell 430 by Virus 2 copying over it.
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 329
+Virus 2 accessed Corrupted Memory Block 36.
+- Executing Virus in Cell 325
+Virus 2 was destroyed in Cell 372 by Virus copying over it.
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 330
+Virus Corrupted Cell 403.
+- Executing Virus in Cell 337
+Virus Copied to Cell 53
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 341
+Virus Corrupted Cell 60.
+- Executing Virus 2 in Cell 343
+Virus 2 Copied to Cell 67
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 348
+Virus 2 accessed Corrupted Memory Block 46.
+- Executing Virus in Cell 364
+Virus Copied to Cell 387
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 368
+Virus Corrupted Cell 443.
+- Executing Virus in Cell 374
+Virus 2 was destroyed in Cell 453 by Virus copying over it.
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 379
+Virus Corrupted Virus's Cell 110.
+- Executing Virus 2 in Cell 376
+Virus 2 Copied to Cell 17
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus was destroyed in Cell 381 by Virus 2 overwriting it.
+Virus 2 accessed Corrupted Memory Block 26.
+- Executing Virus in Cell 382
+Virus Copied to Cell 122
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 386
+Virus Corrupted Cell 89.
+- Executing Virus in Cell 409
+Virus Copied to Cell 69
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 413
+Virus Corrupted Virus's Cell 422.
+- Executing Virus 2 in Cell 447
+Virus 2 was destroyed in Cell 29 by Virus 2 copying over it.
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 452
+Virus 2 accessed Corrupted Cell 452.
+Virus 2 was destroyed in Cell 447 by Virus 2 deleting it.
+- Executing Virus in Cell 470
+Virus Copied to Cell 7
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 474
+Virus Corrupted Cell 84.
+- Executing Virus 2 in Cell 486
+Virus 2 Copied to Cell 98
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 was destroyed in Cell 490 by Virus 2 overwriting it.
+Virus 2 accessed Corrupted Memory Block 37.
+- Executing Virus in Cell 491
+Virus Copied to Cell 78
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 495
+Virus Corrupted Cell 97.
+
+* Beggining CPU Cycle 9 *
+
+- Executing Virus 2 in Cell 6
+Virus 2 Copied to Cell 248
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 10
+Virus 2 Corrupted Memory Block 33.
+- Executing Virus in Cell 7
+Virus Copied to Cell 50
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 11
+Virus Corrupted Cell 228.
+- Executing Virus 2 in Cell 13
+Virus 2 Copied to Cell 148
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 18
+Virus 2 Corrupted Memory Block 42.
+- Executing Virus 2 in Cell 17
+Virus 2 Copied to Cell 119
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 21
+Virus 2 accessed Corrupted Memory Block 12.
+- Executing Virus 2 in Cell 19
+Virus 2 Copied to Cell 71
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 24
+Virus 2 accessed Corrupted Memory Block 31.
+- Executing Virus 2 in Cell 29
+Virus was destroyed in Cell 130 by Virus 2 copying over it.
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 was destroyed in Cell 34 by Virus 2 overwriting it.
+Virus 2 accessed Corrupted Memory Block 13.
+- Executing Virus 2 in Cell 35
+Virus 2 Copied to Cell 160
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 40
+Virus 2 accessed Corrupted Cell 40.
+Virus 2 was destroyed in Cell 35 by Virus 2 deleting it.
+- Executing Virus 2 in Cell 41
+Virus 2 Copied to Cell 272
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 46
+Virus 2 accessed Corrupted Memory Block 33.
+- Executing Virus in Cell 49
+Virus Copied to Cell 249
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus was destroyed in Cell 53 by Virus overwriting it.
+Virus Corrupted Virus's Cell 202.
+- Executing Virus in Cell 52
+Virus Copied to Cell 171
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 57
+Virus Corrupted Cell 127.
+- Executing Virus 5 in Cell 59
+Virus 5 was destroyed in Cell 62 by Virus 5 copying over it.
+Virus 5 accessed Corrupted Memory Block 7.
+- Executing Virus 5 in Cell 65
+Virus 5 Copied to Cell 68
+Virus 5 accessed Corrupted Memory Block 0.
+- Executing Virus 2 in Cell 67
+Virus 2 Copied to Cell 312
+Virus 2 accessed Corrupted Cell 312.
+Virus 2 was destroyed in Cell 67 by Virus 2 deleting it.
+- Executing Virus in Cell 69
+Virus Copied to Cell 181
+Virus accessed Corrupted Cell 181.
+Virus was destroyed in Cell 69 by Virus deleting it.
+- Executing Virus 2 in Cell 75
+Virus 2 Copied to Cell 286
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 was destroyed in Cell 79 by Virus 2 overwriting it.
+Virus 2 accessed Corrupted Memory Block 41.
+- Executing Virus in Cell 78
+Virus Copied to Cell 306
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus 5 was destroyed in Cell 83 by Virus overwriting it.
+Virus Corrupted Cell 320.
+- Executing Virus 2 in Cell 98
+Virus 2 Copied to Cell 168
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 103
+Virus 2 Corrupted Memory Block 33.
+- Executing Virus in Cell 100
+Virus Copied to Cell 127
+Virus accessed Corrupted Cell 127.
+Virus was destroyed in Cell 100 by Virus deleting it.
+- Executing Virus 2 in Cell 113
+Virus 2 Copied to Cell 282
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 117
+Virus 2 Corrupted Memory Block 21.
+- Executing Virus in Cell 115
+Virus Copied to Cell 314
+Virus accessed Corrupted Cell 314.
+Virus was destroyed in Cell 115 by Virus deleting it.
+- Executing Virus in Cell 122
+Virus Copied to Cell 287
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 127
+Virus Corrupted Virus's Cell 279.
+- Executing Virus 2 in Cell 125
+Virus 2 Copied to Cell 364
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 129
+Virus 2 Corrupted Memory Block 28.
+- Executing Virus 2 in Cell 136
+Virus 2 Copied to Cell 290
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 141
+Virus 2 Corrupted Memory Block 22.
+- Executing Virus 4 in Cell 147
+Virus 2 was destroyed in Cell 148 by Virus 4 overwriting it.
+Virus 4 Moved to Cell 149
+Virus 4 Moved to Cell 150
+Virus 4 Moved to Cell 151
+Virus 4 Moved to Cell 150
+Virus 4 Moved to Cell 149
+Virus 4 Moved to Cell 148
+Virus 4 Moved to Cell 147
+- Executing Virus in Cell 182
+Virus Copied to Cell 285
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 186
+Virus Corrupted Cell 352.
+- Executing Virus in Cell 184
+Virus Copied to Cell 209
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 189
+Virus accessed Corrupted Cell 328.
+- Executing Virus in Cell 193
+Virus Copied to Cell 378
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 197
+Virus Corrupted Cell 322.
+- Executing Virus 2 in Cell 201
+Virus 2 Copied to Cell 393
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 205
+Virus 2 Corrupted Memory Block 3.
+- Executing Virus in Cell 208
+Virus was destroyed in Cell 287 by Virus copying over it.
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 213
+Virus Corrupted Cell 288.
+- Executing Virus in Cell 221
+Virus was destroyed in Cell 287 by Virus copying over it.
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 225
+Virus Corrupted Cell 304.
+- Executing Virus 2 in Cell 222
+Virus was destroyed in Cell 378 by Virus 2 copying over it.
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 227
+Virus 2 Corrupted Memory Block 12.
+- Executing Virus in Cell 251
+Virus Copied to Cell 261
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 255
+Virus Corrupted Cell 401.
+- Executing Virus in Cell 254
+Virus Copied to Cell 369
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 258
+Virus Corrupted Cell 484.
+- Executing Virus in Cell 256
+Virus Copied to Cell 274
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 260
+Virus Corrupted Cell 314.
+- Executing Virus 2 in Cell 276
+Virus 2 was destroyed in Cell 282 by Virus 2 copying over it.
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 281
+Virus 2 accessed Corrupted Cell 281.
+Virus 2 was destroyed in Cell 276 by Virus 2 deleting it.
+- Executing Virus in Cell 293
+Virus Copied to Cell 36
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 298
+Virus Corrupted Cell 397.
+- Executing Virus in Cell 301
+Virus Copied to Cell 345
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus was destroyed in Cell 306 by Virus overwriting it.
+Virus Corrupted Cell 46.
+- Executing Virus in Cell 308
+Virus Copied to Cell 340
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 313
+Virus Corrupted Virus's Cell 372.
+- Executing Virus 2 in Cell 310
+Virus 2 Copied to Cell 432
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 315
+Virus 2 accessed Corrupted Memory Block 47.
+- Executing Virus 2 in Cell 326
+Virus 2 Copied to Cell 416
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 331
+Virus 2 Corrupted Memory Block 19.
+- Executing Virus in Cell 330
+Virus Copied to Cell 60
+Virus accessed Corrupted Cell 60.
+Virus was destroyed in Cell 330 by Virus deleting it.
+- Executing Virus in Cell 341
+Virus 2 was destroyed in Cell 10 by Virus copying over it.
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus was destroyed in Cell 345 by Virus overwriting it.
+Virus Corrupted Cell 471.
+- Executing Virus in Cell 350
+Virus Copied to Cell 400
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 354
+Virus Corrupted Cell 90.
+- Executing Virus in Cell 368
+Virus Copied to Cell 5
+Virus accessed Corrupted Cell 5.
+Virus was destroyed in Cell 368 by Virus deleting it.
+- Executing Virus in Cell 379
+Virus Copied to Cell 440
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 383
+Virus Corrupted Cell 102.
+- Executing Virus in Cell 384
+Virus Copied to Cell 385
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 389
+Virus accessed Corrupted Cell 389.
+Virus was destroyed in Cell 384 by Virus deleting it.
+- Executing Virus in Cell 386
+Virus Copied to Cell 448
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 390
+Virus Corrupted Virus's Cell 396.
+- Executing Virus in Cell 387
+Virus Copied to Cell 9
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 392
+Virus Corrupted Cell 35.
+- Executing Virus in Cell 413
+Virus Copied to Cell 447
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 418
+Virus Corrupted Cell 441.
+- Executing Virus 2 in Cell 414
+Virus 2 Copied to Cell 26
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus was destroyed in Cell 418 by Virus 2 overwriting it.
+Virus 2 Corrupted Memory Block 15.
+- Executing Virus 2 in Cell 430
+Virus 2 Copied to Cell 72
+Virus 2 Put 1 into Memory Block 1.
+Virus 2 Got 1 from Memory Block 1.
+Virus 2 Moved to Cell 435
+Virus 2 accessed Corrupted Memory Block 6.
+- Executing Virus in Cell 446
+Virus Copied to Cell 169
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 451
+Virus accessed Corrupted Cell 104.
+- Executing Virus in Cell 453
+Virus Copied to Cell 51
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 457
+Virus Corrupted Cell 80.
+- Executing Virus in Cell 459
+Virus Copied to Cell 135
+Virus Put 1 into Memory Block 1.
+Virus Got 1 from Memory Block 1.
+Virus Moved to Cell 464
+Virus Corrupted Cell 185.

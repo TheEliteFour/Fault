@@ -30,7 +30,7 @@ public class Config {
 	    try {
 		file.createNewFile();
 	    } catch (IOException ex) {
-		System.out.println("Failed to create config " + file.getAbsolutePath() + "!");
+		Log.write("Failed to create config " + file.getAbsolutePath() + "!");
 	    }
 	    YamlConfiguration config = getYaml();
 	    config.set("Programs-Directory", new File(Fault.base, "programs").getAbsolutePath());
@@ -71,7 +71,7 @@ public class Config {
 	boolean bool = config.getBoolean("Use-Program-List");
 	if (bool) {
 	    if (config.getStringList("Program-List").size() < 2) {
-		System.out.println("Program list MUST have 2 or more programs, defaulting to folder.");
+		Log.write("Program list MUST have 2 or more programs, defaulting to folder.");
 		return false;
 	    }
 	}
@@ -96,11 +96,11 @@ public class Config {
 	try {
 	    config.load(getFile());
 	} catch (FileNotFoundException ex) {
-	    System.out.println("Failed to find config " + getFile().getAbsolutePath() + "!");
+	    Log.write("Failed to find config " + getFile().getAbsolutePath() + "!");
 	} catch (IOException ex) {
-	    System.out.println("Failed to load config " + getFile().getAbsolutePath() + "!");
+	    Log.write("Failed to load config " + getFile().getAbsolutePath() + "!");
 	} catch (InvalidConfigurationException ex) {
-	    System.out.println("Failed to read config " + getFile().getAbsolutePath() + "!");
+	    Log.write("Failed to read config " + getFile().getAbsolutePath() + "!");
 	}
 	return config;
 
@@ -110,7 +110,7 @@ public class Config {
 	try {
 	    config.save(getFile());
 	} catch (IOException ex) {
-	    System.out.println("Failed to write config " + getFile().getAbsolutePath() + "!");
+	    Log.write("Failed to write config " + getFile().getAbsolutePath() + "!");
 	}
     }
 
@@ -118,7 +118,7 @@ public class Config {
 	YamlConfiguration config = getYaml();
 	String string = config.getString("Programs-Directory", new File(Fault.base, "programs").getAbsolutePath());
 	if (!(new File(string).exists())) {
-	    System.out.println("Set directory not found, defaulting.");
+	    Log.write("Set directory not found, defaulting.");
 	    programs = new File(Fault.base, "programs").getAbsolutePath();
 	} else {
 	    programs = string;
@@ -126,7 +126,7 @@ public class Config {
 	int round = config.getInt("Rounds", 3);
 	if (round < 1) {
 	    round = 3;
-	    System.out.println("You must have at least 1 Round, setting to 3.");
+	    Log.write("You must have at least 1 Round, setting to 3.");
 	}
 	if (CommandHandler.demoMode) {
 	    if (round !=3) {
@@ -138,11 +138,11 @@ public class Config {
 	int cell = config.getInt("Cells", 100);
 	if (cell < 100) {
 	    cell = 100;
-	    System.out.println("You must have at least 100 Cells, setting to 100.");
+	   Log.write("You must have at least 100 Cells, setting to 100.");
 	}
 	if (cell > 1000) {
 	    cell = 1000;
-	    System.out.println("You cant have more than 1000 Cells, setting to 1000.");
+	    Log.write("You cant have more than 1000 Cells, setting to 1000.");
 	}
 	if (CommandHandler.demoMode) {
 	    if (cell != 100) {
@@ -154,7 +154,7 @@ public class Config {
 	int cycle = config.getInt("Max-Cycles", 50);
 	if (cycle < 50) {
 	    cycle = 50;
-	    System.out.println("You must have at least 50 Cycles, setting to 50.");
+	    Log.write("You must have at least 50 Cycles, setting to 50.");
 	}
 	if (CommandHandler.demoMode) {
 	    if (cycle != 50) {
@@ -166,11 +166,11 @@ public class Config {
 	int block = config.getInt("Memory-Blocks", 50);
 	if (block < 50) {
 	    block = 50;
-	    System.out.println("You must have at least 50 Memory Blocks, setting to 50.");
+	    Log.write("You must have at least 50 Memory Blocks, setting to 50.");
 	}
 	if (block > 400) {
 	    block = 400;
-	    System.out.println("You cant have more than 400 Memory Blocks, setting to 400.");
+	    Log.write("You cant have more than 400 Memory Blocks, setting to 400.");
 	}
 	if (CommandHandler.demoMode) {
 	    if (block != 50) {

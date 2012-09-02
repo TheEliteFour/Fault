@@ -47,15 +47,17 @@ public class Fault {
 	} catch (URISyntaxException ex) {
 	}
 	Log.deleteOld();
+	Gui g = new Gui();
+	GUIHandler gui = new GUIHandler(g);	
+	Log.setGui(gui);
 	Debug.deleteOld();
 	Config.loadConfig();
 	Config.processDefaults();
-	Gui g = new Gui();
+	gui.updateSettings();
 	if (Config.useGUI) {
 	    g.setVisible(true);
 	}
-	GUIHandler gui = new GUIHandler(g);
-	gui.updateSettings();
+	
 	File dir = new File(Config.programs);
 	if (!dir.exists()) {
 	    Log.write("The directory " + dir.getAbsolutePath() + " does not exist!");
@@ -108,14 +110,14 @@ public class Fault {
 	    }
 	}
 	game.start(gui);
-	System.out.println();
-	System.out.println();
-	System.out.println("The game is over.  Check game.log for details on the game.");
-	System.out.println();
+	Log.write("");
+	Log.write("");
+	Log.write("The game is over.  Check game.log for details on the game.");
+	Log.write("");
 	if (Config.useGUI) {
-	    System.out.println("Press ENTER or close the Graphic Interface to exit...");
+	    //Log.write("Press ENTER or close the Graphic Interface to exit...");
 	} else {
-	    System.out.println("Press ENTER to exit...");
+	    //Log.write("Press ENTER to exit...");
 	}
 	Scanner sc = new Scanner(System.in);
 	while (sc.nextLine() == null);

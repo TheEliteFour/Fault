@@ -22,6 +22,7 @@ public class GUIHandler {
     private int cell;
     private HashMap<Integer, String> occs;
     private HashMap<Integer, String> memoccs;
+    public static boolean paused=false;
 
     public Gui getGUI() {
 	return gui;

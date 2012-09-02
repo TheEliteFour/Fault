@@ -73,7 +73,6 @@ public class CORRUPT {
 		str = command[2].toLowerCase().substring(0, 4);
 	    }
 	    if (!str.contains("math") && !str.toLowerCase().contains("get") && !str.toLowerCase().contains("rand")) {
-		System.out.println("Test 3 " + str);
 		return Errors.syntaxError;
 	    }
 	    String error = CommandHandler.process(program, command[2], true);

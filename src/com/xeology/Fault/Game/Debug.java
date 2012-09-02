@@ -23,7 +23,7 @@ public class Debug {
 	    try {
 		file.createNewFile();
 	    } catch (IOException ex) {
-		System.out.println("Failed to create debug log!");
+		Log.write("Failed to create debug log!");
 	    }
 	}
 	try {
@@ -35,7 +35,7 @@ public class Debug {
 	    out.write(string);
 	    out.close();
 	} catch (Exception e) {
-	    System.err.println("Error: " + e.getMessage());
+	    Log.write("Error: " + e.getMessage());
 	}
     }
 

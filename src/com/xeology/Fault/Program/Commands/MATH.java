@@ -88,7 +88,6 @@ public class MATH {
 		str = command.toLowerCase().substring(0, 4);
 	    }
 	    if (!str.contains("rand") && !str.toLowerCase().contains("get")) {
-		System.out.println("Test 7 : " + str);
 		return Errors.syntaxError;
 	    }
 	    String error = CommandHandler.process(program, command, true);

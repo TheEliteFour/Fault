@@ -4,6 +4,7 @@
  */
 package com.xeology.Fault.GU;
 
+import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
@@ -12,7 +13,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
-
 
 /**
  *
@@ -25,8 +25,15 @@ public class Gui extends javax.swing.JFrame {
      */
     public Gui() {
 	initComponents();
-	this.setIconImage(new 
-ImageIcon(getClass().getResource("Gears.png")).getImage()); 
+	this.setIconImage(new ImageIcon(getClass().getResource("Gears.png")).getImage());
+	Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+
+	int w = this.getSize().width;
+	int h = this.getSize().height;
+	int x = (dim.width - w) / 2;
+	int y = (dim.height - h) / 2;
+
+	this.setLocation(x, y);
 
     }
 
@@ -47,6 +54,9 @@ ImageIcon(getClass().getResource("Gears.png")).getImage());
         Current = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        Screen = new javax.swing.JTextArea();
+        Pause = new javax.swing.JToggleButton();
         Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -68,17 +78,17 @@ ImageIcon(getClass().getResource("Gears.png")).getImage());
 
         Output.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 255, 0)));
         Output.setFocusable(false);
-        Output.setBounds(14, 104, 370, 180);
+        Output.setBounds(14, 104, 320, 180);
         jLayeredPane1.add(Output, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         settings.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 255, 0)));
         settings.setFocusable(false);
-        settings.setBounds(280, 10, 100, 80);
+        settings.setBounds(234, 10, 100, 80);
         jLayeredPane1.add(settings, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         Current.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 255, 0)));
         Current.setFocusable(false);
-        Current.setBounds(14, 10, 220, 70);
+        Current.setBounds(14, 10, 210, 70);
         jLayeredPane1.add(Current, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel1.setForeground(new java.awt.Color(51, 255, 0));
@@ -91,26 +101,66 @@ ImageIcon(getClass().getResource("Gears.png")).getImage());
         jLabel2.setBounds(20, 290, 60, 20);
         jLayeredPane1.add(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
+        jScrollPane1.setBackground(new java.awt.Color(0, 0, 0));
+        jScrollPane1.setAutoscrolls(true);
+
+        Screen.setBackground(new java.awt.Color(0, 0, 0));
+        Screen.setColumns(20);
+        Screen.setFont(new java.awt.Font("Monospaced", 1, 13)); // NOI18N
+        Screen.setForeground(new java.awt.Color(255, 255, 255));
+        Screen.setRows(5);
+        Screen.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 255, 0)));
+        jScrollPane1.setViewportView(Screen);
+
+        jScrollPane1.setBounds(350, 10, 540, 575);
+        jLayeredPane1.add(jScrollPane1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        Pause.setText("Pause");
+        Pause.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                PauseStateChanged(evt);
+            }
+        });
+        Pause.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PauseActionPerformed(evt);
+            }
+        });
+        Pause.setBounds(20, 600, 90, 23);
+        jLayeredPane1.add(Pause, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
         Background.setBackground(new java.awt.Color(0, 0, 0));
         Background.setForeground(new java.awt.Color(0, 255, 0));
         Background.setFocusable(false);
         Background.setOpaque(true);
-        Background.setBounds(0, 0, 420, 610);
+        Background.setBounds(0, 0, 920, 650);
         jLayeredPane1.add(Background, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLayeredPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+            .addComponent(jLayeredPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 900, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLayeredPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
+            .addComponent(jLayeredPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 636, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void PauseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PauseActionPerformed
+	// TODO add your handling code here:
+    }//GEN-LAST:event_PauseActionPerformed
+
+    private void PauseStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_PauseStateChanged
+	if (GUIHandler.paused) {
+	    GUIHandler.paused = false;
+	} else {
+	    GUIHandler.paused = true;
+	}
+    }//GEN-LAST:event_PauseStateChanged
 
     /**
      * @param args the command line arguments
@@ -152,9 +202,12 @@ ImageIcon(getClass().getResource("Gears.png")).getImage());
     public javax.swing.JLabel Current;
     public javax.swing.JLabel Memory;
     public javax.swing.JLabel Output;
+    public javax.swing.JToggleButton Pause;
+    public javax.swing.JTextArea Screen;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLayeredPane jLayeredPane1;
+    public javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JLabel settings;
     // End of variables declaration//GEN-END:variables
 }
