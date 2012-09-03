@@ -196,7 +196,9 @@ public class Round {
 
 	Log.write(program.getName() + " Shifted Memory Block " + block + " to " + block2 + ".");
 	corruptedBlocks[block2] = corruptedBlocks[block];
+	corruptedBlocks[block]=false;
 	blocks[block2] = blocks[block];
+	blocks[block]=0;
 	return Errors.okError;
     }
 
@@ -226,6 +228,7 @@ public class Round {
 
 
 	corruptedCells[cell2] = corruptedCells[cell];
+	corruptedCells[cell]=false;
 	if (corruptedCells[cell2]) {
 	    gui.updateCPU("Corrupted.xVx.xVx", cell2);
 	    gui.updateCPU(null, cell);
