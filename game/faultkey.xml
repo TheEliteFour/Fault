@@ -1,0 +1,30 @@
+<launch4jConfig>
+  <dontWrapJar>false</dontWrapJar>
+  <headerType>gui</headerType>
+  <jar>C:\Users\Xeology\Documents\NetBeansProjects\Fault\game\FaultKeyManager.jar</jar>
+  <outfile>C:\Users\Xeology\Documents\NetBeansProjects\Fault\game\FaultKeyManager.exe</outfile>
+  <errTitle></errTitle>
+  <cmdLine></cmdLine>
+  <chdir></chdir>
+  <priority>normal</priority>
+  <downloadUrl>http://java.com/download</downloadUrl>
+  <supportUrl></supportUrl>
+  <customProcName>true</customProcName>
+  <stayAlive>false</stayAlive>
+  <manifest></manifest>
+  <icon>C:\Users\Xeology\Desktop\Gears.ico</icon>
+  <singleInstance>
+    <mutexName>Fault</mutexName>
+    <windowTitle>Fault - InDev</windowTitle>
+  </singleInstance>
+  <classPath>
+    <mainClass>com.xeology.Fault.Keys.FaultKeyManager</mainClass>
+    <cp>com.xeology.Fault.Keys.FaultKeyManager</cp>
+  </classPath>
+  <jre>
+    <path></path>
+    <minVersion>1.5.0</minVersion>
+    <maxVersion>2.5.0</maxVersion>
+    <jdkPreference>preferJre</jdkPreference>
+  </jre>
+</launch4jConfig>

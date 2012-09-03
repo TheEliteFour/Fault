@@ -4,12 +4,15 @@
  */
 package com.xeology.Fault;
 
+import com.xeology.Fault.AntiPiracy.PiracyHandler;
 import com.xeology.Fault.GU.GUIHandler;
 import com.xeology.Fault.GU.Gui;
 import com.xeology.Fault.Game.Config;
 import com.xeology.Fault.Game.Debug;
 import com.xeology.Fault.Game.Game;
 import com.xeology.Fault.Game.Log;
+import com.xeology.Fault.Networking.ConnectionListener;
+import com.xeology.Fault.Program.Commands.CommandHandler;
 import com.xeology.Fault.Program.Program;
 import java.io.BufferedReader;
 import java.io.DataInputStream;
@@ -29,6 +32,7 @@ import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import jexxus.client.ClientConnectionListener;
 
 /**
  *
@@ -37,6 +41,7 @@ import java.util.logging.Logger;
 public class Fault {
 
     public static File base;
+    public static ConnectionListener networkListener;
 
     /**
      * @param args the command line arguments
@@ -46,18 +51,28 @@ public class Fault {
 	    base = new File(new File(Fault.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath()).getParentFile().getPath());
 	} catch (URISyntaxException ex) {
 	}
+	networkListener = new ConnectionListener();
 	Log.deleteOld();
 	Gui g = new Gui();
-	GUIHandler gui = new GUIHandler(g);	
+	GUIHandler gui = new GUIHandler(g);
+	g.setVisible(true);	
 	Log.setGui(gui);
+	if (CommandHandler.keyMode) {
+	    PiracyHandler.process(gui);
+	    boolean pause = gui.getGUI().Pause.isSelected();
+	    while (pause) {
+		pause = gui.getGUI().Pause.isSelected();
+		System.out.println("Paused: " + pause);
+	    }
+	}
 	Debug.deleteOld();
 	Config.loadConfig();
 	Config.processDefaults();
 	gui.updateSettings();
-	if (Config.useGUI) {
-	    g.setVisible(true);
-	}
-	
+	//if (Config.useGUI) {
+	//g.setVisible(true);
+	//}
+
 	File dir = new File(Config.programs);
 	if (!dir.exists()) {
 	    Log.write("The directory " + dir.getAbsolutePath() + " does not exist!");

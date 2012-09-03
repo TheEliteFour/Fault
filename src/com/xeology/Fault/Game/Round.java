@@ -375,7 +375,7 @@ public class Round {
 		boolean pause=gui.getGUI().Pause.isSelected();
 		while (pause) {
 		    pause=gui.getGUI().Pause.isSelected();
-		    System.out.println(pause);
+		    System.out.println("Paused: "+pause);
 		}
 	    }
 	    for (Program program : cells) {

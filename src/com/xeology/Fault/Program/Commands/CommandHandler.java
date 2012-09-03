@@ -10,7 +10,8 @@ import com.xeology.Fault.Program.Program;
  */
 public class CommandHandler {
 
-    public static final boolean demoMode = false;
+    public static boolean demoMode = false;
+    public static final boolean keyMode = false;
 
     public static String process(Program program, String command, boolean withinCommand) {
 	String[] broken = command.split(" ");
